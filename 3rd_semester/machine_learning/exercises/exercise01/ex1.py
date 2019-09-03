@@ -46,6 +46,6 @@ if __name__ == "__main__":
     axes.set_title("Least squares fitting")
     axes.legend()
 
-    fig.savefig("1st_degree.png")
+    fig.savefig("3rd_degree.png")
 
 
