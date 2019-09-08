@@ -46,10 +46,27 @@ def solution_6():
     sample_size1 = int(input("give me sample size1: "))
     normal_sample1 = my_normal_sample_generator(sample_size1, mean1, std1)
 
+    m1 = np.mean(normal_sample1)
+    s2_1 = np.sum((normal_sample1 - m1) ** 2) / len(normal_sample1)
+
     mean2 = float(input("give me mean2: "))
     std2 = float(input("give me std2: "))
     sample_size2 = int(input("give me sample size2: "))
     normal_sample2 = my_normal_sample_generator(sample_size2, mean2, std2)
+
+    m2 = np.mean(normal_sample2)
+    s2_2 = np.sum((normal_sample2 - m2) ** 2) / len(normal_sample2)
+
+    fig, axes = plt.subplots()
+    plt.style.use("ggplot")
+    axes.hist(normal_sample1, bins = 100)
+    axes.hist(normal_sample2, bins = 100)
+    axes.set_ylabel("y")
+    axes.set_title("current normal distribution")
+    fig.savefig("two.png")
+
+    coeffs = [-2 * s2_2 + 2 * s2_1, 4 * (m1 * s2_2 - m2 * s2_1), s2_1 * s2_2 * 4 * (- np.log(np.sqrt(s2_1)) + np.log(np.sqrt(s2_2))) - 2 * s2_2 * (m1 ** 2) + 2 * s2_1 * (m2 ** 2)]
+    print(np.roots(coeffs))
 
 if __name__ == "__main__":
     if sys.argv[1] == "3":
