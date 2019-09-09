@@ -49,6 +49,8 @@ def solution_6():
     m1 = np.mean(normal_sample1)
     s2_1 = np.sum((normal_sample1 - m1) ** 2) / len(normal_sample1)
 
+    print(f"m1 = {m1}\ts2_1 = {s2_1}")
+
     mean2 = float(input("give me mean2: "))
     std2 = float(input("give me std2: "))
     sample_size2 = int(input("give me sample size2: "))
@@ -57,6 +59,8 @@ def solution_6():
     m2 = np.mean(normal_sample2)
     s2_2 = np.sum((normal_sample2 - m2) ** 2) / len(normal_sample2)
 
+    print(f"m2 = {m2}\ts2_2 = {s2_2}")
+    
     fig, axes = plt.subplots()
     plt.style.use("ggplot")
     axes.hist(normal_sample1, bins = 100)
@@ -65,8 +69,16 @@ def solution_6():
     axes.set_title("current normal distribution")
     fig.savefig("two.png")
 
-    coeffs = [-2 * s2_2 + 2 * s2_1, 4 * (m1 * s2_2 - m2 * s2_1), s2_1 * s2_2 * 4 * (- np.log(np.sqrt(s2_1)) + np.log(np.sqrt(s2_2))) - 2 * s2_2 * (m1 ** 2) + 2 * s2_1 * (m2 ** 2)]
-    print(np.roots(coeffs))
+    coeffs_estimate = [-2 * s2_2 + 2 * s2_1, 4 * (m1 * s2_2 - m2 * s2_1), s2_1 * s2_2 * 4 * (- np.log(np.sqrt(s2_1)) + np.log(np.sqrt(s2_2))) - 2 * s2_2 * (m1 ** 2) + 2 * s2_1 * (m2 ** 2)]
+    print(f"estimate discriminant points = {np.roots(coeffs_estimate)}")
+
+    m1 = mean1
+    m2 = mean2
+    s2_1 = std1 ** 2
+    s2_2 = std2 ** 2
+
+    coeffs_theoretical = [-2 * s2_2 + 2 * s2_1, 4 * (m1 * s2_2 - m2 * s2_1), s2_1 * s2_2 * 4 * (- np.log(np.sqrt(s2_1)) + np.log(np.sqrt(s2_2))) - 2 * s2_2 * (m1 ** 2) + 2 * s2_1 * (m2 ** 2)]
+    print(f"theoretical discriminant points = {np.roots(coeffs_theoretical)}")
 
 if __name__ == "__main__":
     if sys.argv[1] == "3":
