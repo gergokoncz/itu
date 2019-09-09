@@ -1,3 +1,3 @@
 select ID, name
 from people
-where ID NOT IN(SELECT peopleID from results);
+where ID not in(select peopleID from results);
