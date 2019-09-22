@@ -26,12 +26,10 @@ def clusterer(input_data, number_of_clusters):
             min_distance = 1000
             for idx,m in enumerate(m_s):
                 distance = sum([(m[i] - row[i]) ** 2 for i in range(len(row))])
-            #    print(distance, idx)
                 if distance < min_distance:
                     label = idx
                     min_distance = distance
             labels.append(label)
-            #print(row, min_distance, label)
 
         # maximization round
         for i in range(len(m_s)):
@@ -41,7 +39,6 @@ def clusterer(input_data, number_of_clusters):
                 if label == i:
                     n_of_elements += 1
                     for this_id,value in enumerate(sums):
-                        #print(value, input_data[idx, this_id])
                         sums[this_id] += input_data[idx, this_id]
             print(f"cluster {label} has {n_of_elements} elements")
             m_s[i] = [this_sum / n_of_elements for this_sum in sums]
@@ -62,4 +59,4 @@ def cluster_center_printer(cluster_center):
 if __name__ == "__main__":
     all_data = iris_reader()
     number_of_clusters = int(input('n of clusters: '))
-    clusterer(input_data = all_data, number_of_clusters=number_of_clusters)
+    clusterer(input_data = all_data[:, [0,2]], number_of_clusters=number_of_clusters)
