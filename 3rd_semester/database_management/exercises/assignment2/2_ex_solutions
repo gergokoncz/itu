@@ -1,0 +1,6 @@
+Animal(ID, Weight)
+Bird(AnimalID, Wingspan, KilledBy*) -- AnimalID references ID from Animal, KilledBy references ID from Hunter, can be NULL
+Fox(AnimalID, Color) -- AnimalID references ID from Animal
+Dog(AnimalID, Breed, Name, OwnerID) -- AnimalID references ID from Animal, OwnerID references ID from Hunter
+Hunter(ID)
+FoxKills(HunterID, FoxID*, DogID) -- HunterID references ID from Hunter, DogID references AnimalID from Dog, FoxID references AnimalID from Fox
