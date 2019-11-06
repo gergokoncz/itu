@@ -50,3 +50,30 @@ create table boats2(
 	ssn char(10),
 	primary key(bl, bno)
 );
+
+-- populating rentals
+insert into people(id, name)
+select distinct pid, pn
+from rentals;
+
+insert into hcities(zip, city)
+select distinct hz, hc
+from rentals;
+
+insert into houses(id, street, zip)
+select distinct hid, hs, hz
+from rentals;
+
+insert into rentals2(pid, hid, s)
+select pid, hid, s
+from rentals;
+
+-- populating boats
+
+insert into bcities(zip, town)
+select distinct z, t
+from boats;
+
+insert into boats2(bl, bno, z, bn, ssn)
+select bl, bno, z, bn, ssn
+from boats;

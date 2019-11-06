@@ -313,20 +313,12 @@ else 'does not hold' end as validity from
 	 having count(distinct t.bn) > 1
 	) X;
 
-select 'boats:z,bno --> bn' as fd,
+select 'boats:ssn --> ssn' as fd,
 case when count(*) = 0 then 'may hold' 
 else 'does not hold' end as validity from 
-	(select t.z, t.bno 
+	(select t.ssn 
 	from boats t 
-	group by (t.z, t.bno)
-	 having count(distinct t.bn) > 1
-	) X;
-
-select 'boats:z,bno --> ssn' as fd,
-case when count(*) = 0 then 'may hold' 
-else 'does not hold' end as validity from 
-	(select t.z, t.bno 
-	from boats t 
-	group by (t.z, t.bno)
+	group by t.ssn
 	 having count(distinct t.ssn) > 1
 	) X;
+
