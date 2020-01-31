@@ -26,6 +26,27 @@ ssh geko@hpc.itu.dk
 
 hpc.itu.dk for info
 
-5 Exercises with grep
+5 Exercises with grep (done)
 
-a, 
+grep miss pg1661.txt 
+grep "\bmiss\b" pg1661.txt - same as -w
+grep miss pg1661.txt -i for case insensitive
+
+6 Gluing Commands Together with the Pipe (done)
+
+ag -s '\bquick\b' pg1661.txt -S for smart case-sensitive
+24 lines 
+25 altogether
+
+grep -Po '[A-Z](\w)+' 
+ag '\b[A-Z]\w+\b' -o 
+
+7 More Advanced Usage of Unix Tools
+
+
+
+8 Copying Files to and from the Server
+
+
+
+9 Submitting a Job to the HPC cluster
