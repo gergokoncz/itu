@@ -9,7 +9,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 train_text = 'data/train.star.txt'
 dev_star_text = 'data/dev.star.txt'
 dev_star_other_text= 'data/dev.starOther.txt'
-dev_other_text = 'data/train.star.txt'
+dev_other_text = 'data/dev.other.txt'
 
 token_pattern = re.compile('[\(\)]|\[A-Za-z\'-]+|M[rs]\.|\.+|\w+')
 m_sws = set(stopwords.words())
@@ -45,6 +45,7 @@ def lists_to_arrays(labels, tokens, feature_dict):
 if __name__ == '__main__':
     train_labels, train_tokens, train_vocab = convert_data(train_text)
     index_dir = {key: value for (value, key) in enumerate(train_vocab)}
+    inversed_index_dir = {value: key for (key, value) in index_dir.items()}
     train_X, train_y = lists_to_arrays(train_labels, train_tokens, index_dir)
     
     # train perceptron
@@ -56,11 +57,17 @@ if __name__ == '__main__':
     lr = LogisticRegression(random_state = 42, tol = 1e-4)
     lr.fit(train_X, train_y)
     #print(lr.score(train_X, train_y))
-    print(lr.coef_)
+    print('Top words for LR:')
+    for coef in lr.coef_:
+        print([inversed_index_dir[x] for x in np.argsort(coef)[::-1][:10]])
 
+    print("Top words for Perceptron:")
+    for coef in perceptron.coef_:
+        print([inversed_index_dir[x] for x in np.argsort(coef)[::-1][:10]])
+    
     # read devsets
     for current_dev_set in [dev_star_text, dev_star_other_text, dev_other_text]:
-        dev_labels, dev_tokens, _ = convert_data(dev_star_text)
+        dev_labels, dev_tokens, _ = convert_data(current_dev_set)
         dev_X, dev_y = lists_to_arrays(dev_labels, dev_tokens, index_dir)
         pred_y = perceptron.predict(dev_X)
         print(current_dev_set)
