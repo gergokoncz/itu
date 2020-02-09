@@ -117,10 +117,8 @@ class UniformLM(LanguageModel):
         return the probability of a word under the uniform LM assumption and zero if it is not in the vocab
         *history: not used here
         """
-        raise NotImplementedError
+        return 0 if word not in self.vocab else 1/len(self.vocab)
         
-        
-
 # ======
 
 
@@ -151,9 +149,8 @@ class UnigramLM(CountLM):
             ## we store a word in the _counts dictionary as a tuple (word,) -- no history here
             for i in range(0, len(sentence)):
                 # populate counts and norm
-                raise NotImplementedError
-                
- 
+                self._counts[(sentence[i],)] += 1
+                self._norm[()] += 1
 
     def counts(self, word_and_history):
         return self._counts[word_and_history]
@@ -185,9 +182,8 @@ class NgramLM(CountLM):
             ## deliverable 1.5 - make the model more general
             for i in range(self.order-1, len(sentence)):
                 history = tuple(sentence[i - self.order + 1: i])
-               
-                raise NotImplementedError
-                
+                self._counts[(sentence[i],history[:order-1])] += 1
+                self._norm[history] += 1
 
     def counts(self, word_and_history):
         return self._counts[word_and_history]

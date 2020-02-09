@@ -12,7 +12,7 @@ def space_tokenizer(text):
     :returns: a list of words
     :rtype: list
     '''
-    raise NotImplementedError
+    return text.split(" ")
     
 
 # deliverable 1.2
@@ -24,11 +24,10 @@ def create_vocab(tokenized_texts):
     :returns: a vocab (a set of words)
     :rtype: set
     '''
-   
-    raise NotImplementedError
-
-
-
+    vocab = set()
+    for l in tokenized_texts:
+        vocab |= set(l)
+    return vocab
 
 ### helper code
 
