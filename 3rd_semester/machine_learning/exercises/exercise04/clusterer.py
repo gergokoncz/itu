@@ -40,7 +40,7 @@ def clusterer(input_data, number_of_clusters):
                     n_of_elements += 1
                     for this_id,value in enumerate(sums):
                         sums[this_id] += input_data[idx, this_id]
-            print(f"cluster {label} has {n_of_elements} elements")
+            print(f"cluster {i} has {n_of_elements} elements")
             m_s[i] = [this_sum / n_of_elements for this_sum in sums]
         
         cluster_center_printer(m_s)
