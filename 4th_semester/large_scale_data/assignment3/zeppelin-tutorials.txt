@@ -1,0 +1,10 @@
+Zeppelin How-to:
+1. Go to the Zeppelin web-interface: http://130.226.142.166:9995
+2. Log in with your itu-email and the password that has been sent to you
+3. Download the two intro-notebooks to your local machine: https://github.itu.dk/niec/lsda2020/tree/master/zeppelin-notebooks
+4. In the Zeppelin interface press "Import note"
+5. Press "Select JSON File" (You do not need to specify a name)
+6. Select one of the two notebooks you just downloaded
+7. Repeat step 4-6
+8. Go through the intro notebook
+9. Start working!

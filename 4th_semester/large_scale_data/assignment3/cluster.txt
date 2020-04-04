@@ -1,0 +1,14 @@
+The cluster:
+We have set up a local hadoop cluster comprised of 5 desktop machines with the following specs:
+- Intel Xeon quad-core processors
+- 32Gb memory each
+- Fairly old 512GB SSD disks
+- Running CentOS 7.7
+
+The cluster is running Apache Ambari (https://ambari.apache.org/) for cluster management. 
+There is one NameNode and four DataNodes, and the installed services include: HDFS, YARN, MapReduce2, Hive, Spark2 (v 2.3.1), Zeppelin and others.
+
+We will be accessing the cluster through Zeppelin notebooks and using the PySpark API.
+The Zeppelin webinterface (which is running on the NameNode) can be reached at http://130.226.142.166:9995
+
+You can log in with your itu email and a password that you will receive in an email. If you have not received a password, contact Niels at niec@itu.dk
