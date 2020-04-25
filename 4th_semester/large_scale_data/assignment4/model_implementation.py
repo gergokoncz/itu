@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 from sklearn.base import BaseEstimator, TransformerMixin
 from datetime import datetime, timedelta
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
 
 
 class DateTransformer(BaseEstimator, TransformerMixin):
@@ -31,8 +34,14 @@ class Shifter(BaseEstimator, TransformerMixin):
     def fit(self, X, y = None):
         return self
 
-    def transform(self, X, y = None, days = 2):
+    def transform(self, X, y = None, hours = 3):
+        X = X[0]
+        for i in range(hours):
+            colname = f"{i+1}hourback"
+            X[colname] = X['Total'].shift(60 * (-i-1))
+        X = X.dropna()
         y = X['Total']
+        X = X.drop(columns = ['Total'], axis = 1)
         return X, y
 
 
@@ -46,8 +55,13 @@ if __name__ == '__main__':
     columns = results.raw['series'][0]["columns"]
     generation_df = pd.DataFrame(values, columns = columns).set_index("time")
 
-    date_transformed, target = DateTransformer().fit_transform(generation_df)
-    shifted_transformed, target = Shifter().fit_transform(date_transformed, y = target)
+    preparation_pipeline = Pipeline([
+        ('date_worker', DateTransformer()),
+        ('shifter', Shifter())
+    ])
 
-    print(shifted_transformed.head(10))
-    print(target.head(10))
+    processed_data = preparation_pipeline.fit_transform(generation_df)
+
+#    date_transformed, target = DateTransformer().fit_transform(generation_df)
+#    shifted_transformed, target = Shifter().fit_transform(date_transformed, y = target)
+    print(processed_data)
