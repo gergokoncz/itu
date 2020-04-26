@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gregkoncz/git/itu/4th_semester/large_scale_data/assignment4/mlruns/0/97fe76d93cde4b3881dd1002e41a834a/artifacts
+end_time: 1587907516364
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 97fe76d93cde4b3881dd1002e41a834a
+run_uuid: 97fe76d93cde4b3881dd1002e41a834a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1587907516281
+status: 3
+tags: []
+user_id: gregkoncz

@@ -7,7 +7,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
-
+from mlflow import log_metric, log_param, log_artifact
 
 class DateTransformer(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -65,9 +65,13 @@ if __name__ == '__main__':
 
     dim1, dim2 = processed_data[0].shape
 
-
     lreg_model = Lasso().fit(processed_data[0].iloc[:int(0.8*dim1)], processed_data[1][:int(0.8 * dim1)])
     print(lreg_model.score(processed_data[0].loc[int(0.8 * dim1):], processed_data[1][int(0.8 * dim1):]))
 
-    predictions = lreg_model.predict()
-
+    #predictions = lreg_model.predict()
+    log_param("param1", 5)
+    log_metric("foo", 1)
+    log_metric("foo", 2)
+    with open('output.txt', 'w') as f:
+        f.write("Hello World!")
+    log_artifact("output.txt")
