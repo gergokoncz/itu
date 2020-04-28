@@ -1,0 +1,11 @@
+name: energy_gen_forecast
+channels:
+    - defaults
+    - anaconda
+dependencies:
+    - python==3.7
+    - pandas==0.24.2
+    - scikit-learn==0.21.3
+    - pip==20.0.2
+    - pip:
+        - mlflow>=1.6

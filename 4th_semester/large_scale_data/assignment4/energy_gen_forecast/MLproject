@@ -1,0 +1,11 @@
+name: energy_gen_forecast
+
+conda_env: conda.yaml
+
+entry_points:
+    main:
+        parameters:
+            data_file: path
+            regularization: {type: float, default: 0.1}
+        command: "python train.py -r {regularization} {data}"
+    
