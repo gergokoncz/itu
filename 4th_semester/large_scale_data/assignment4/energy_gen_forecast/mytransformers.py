@@ -1,4 +1,5 @@
 from sklearn.base import BaseEstimator, TransformerMixin
+from datetime import datetime, timedelta
 
 class DateTransformer(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -23,10 +24,10 @@ class Shifter(BaseEstimator, TransformerMixin):
     def __init__(self):
         None
     
-    def fit(self, X, y = None):
+    def fit(self, X, y = None, hours = 3):
         return self
 
-    def transform(self, X, y = None, hours = 3):
+    def fit_transform(self, X, y = None, hours = 3):
         X = X[0]
         for i in range(hours):
             colname = f"{i+1}hourback"

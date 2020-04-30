@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Gergo/Documents/GitHub/itu/4th_semester/large_scale_data/assignment4/energy_gen_forecast/mlruns/0/9078a5688fb74b5bb41542d7eda2846f/artifacts
+end_time: 1588103473066
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 9078a5688fb74b5bb41542d7eda2846f
+run_uuid: 9078a5688fb74b5bb41542d7eda2846f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1588103472845
+status: 3
+tags: []
+user_id: Gergo
