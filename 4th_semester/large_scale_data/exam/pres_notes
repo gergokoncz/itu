@@ -175,7 +175,7 @@ High Performance Data Analytics
 - is it about avoiding worse plans
 - enumeration of query plans
 - pipeline whenever possible
-- operators does not have to work on all data
+- operator does not have to work on all data
 - scan -> select -> project -> sort -> result
 - volcano iterator model
 - pull-based execution
@@ -240,7 +240,7 @@ Commodity Clusters
 	- master pushes values to reducers
 	- master pings workers periodically
 - common practice is make M and R larger than number of nodes
-- usually R is smaller
+- usually R is smaller than M
 
 - combiners
 - preaggregations on mappers
@@ -254,20 +254,242 @@ Commodity Clusters
                           Lecture 5 - Spark
 -------------------------------------------------------------------------------
 
+DataFlow Programming
+- dealing with volume
+	- partitioning
+	- resource management on cluster
+- HDFS
+- Map-Reduce
+
+Limitations of Hadoop
+- loading file into hdfs
+- datanodes
+- MapReduce parallel execution
+- Hadoop 1.x
+	- JobTracker
+		- cluster management
+	- TaskTracker
+		- tasks assigned to node
+- limits
+	- scalabaility
+		- up to 5000 nodes
+	- availability
+		- failer of master
+	- partitioning resources into map and reduce
+		- not optimal
+- Hadoop 2.x
+	- resource manager RM
+		- YARN
+			- scheduler plus application manager
+			- re-architecture of Hadoop
+			- multiple application run on same platform
+	- AM Application master
+	- NM Node manager
+- another limit:
+	- complex queries hard to conform to MapReduce
+	-> high level query language
+- limit as well:
+	- intermediate results stored in HDFS
+- fault tolerance
+	- redundancy in time and space
+-> latency
+	- data is stored on disks after each step -> slow
+
+Spark
+- open source distributed unified analytics engine for big data and ml
+- mostly in-memory processing
+- has APIs for programming languages
+	- Scala, Python, Java, R, SQL
+- libraries for
+	- SQL queries, streaming data, ml and graph processing
+
+- inherited from functional programming
+- in-memory and inmutable
+- fault tolerance by keeping the lineage of transformations
+- 100x faster than Hadoop
+
+- pySpark
+- apache Zeppelin
+- spark available thorugh cloud providers
+
+- iteration quicker in Spark, no system reads and writes at intermediate steps
+- overview of Spark runtime
+	- driver program launches multiple workers
+	- read data blocks from dfs
+	- can persist data in memory
+	- sparkContext
+
+- RDDs 
+	- abstractions allowing for efficient data reuse
+	- immutable
+	- split into partitions
+	- has type
+	- cached: mainly stored in memory, yet can be persisted
+	- processed in parallel
+- transformations and actions
+	- transformations are lazy
+	- actions force executions
+
+- RDD lineage is a graph of all the parent RDDs of an RDD
+- narrow vs wide dependencies
+	- narrow 1 to 1: map
+	- wide many to many: groupByKey
+
+- lineage to DAG of stages
+- boundaries of stages are wide dependencies
+- RDDs are recomputed anytime you run an action on them
+
+Dataset vs DataFrame
+- typed vs untyped API
+- Spark DF
+	- less restrictive
+	- compile time errors more caught
+	- suitable for structured and semistructured data
+	- can create from rdds
+	- or external data source
+- SparkSQl literals
+- declarative vs imperative
 
 -------------------------------------------------------------------------------
                     Lecture 6 - OLAP/HTAP at Scale
 -------------------------------------------------------------------------------
 
+OLTP/OLAP/HTAP
+- production DB OLTP
+- Data warehouse OLAP
+	- scans and aggregations
+OLAP
+- Online Analytic Processing
+- uses info in db to drive strategic decisions
+- infrequent updates
+- role in lifecycle:
+	- exploration
+	- model building
+- star schema
+- fact and dimension tables
+- fact tables as N dimensional data cubes
+- aggregation in OLAP
+- drilling down and rolling up
+
+- pivoting
+	- things in group by basically
+- slicing
+	- where clause
+	- value for an axis
+- cube operator
+	- group by cube()
+- rollup operator
+- HBASE
+- Apache Hive
+- Apache Kylin
 
 -------------------------------------------------------------------------------
                  Lecture 7 - Mining Massive Data Sets
 -------------------------------------------------------------------------------
 
+- not ML
+
+Association Rule Discovery
+- supermarket shelf management
+- identify items frequently bought together
+- market-basket model
+- what customers buy together
+- tie-in tricks
+	- sale on one, raise other
+- plagiarism detection
+- many-to-many mapping between two kinds of things
+- communities in graph
+
+Frequent Itemsets
+- appear together
+- frequent as over support threshold
+
+Association Rules
+- if-then rules
+- confidence
+	- conditional prob P(A|B)
+	- not all high confidence itemset is interesting
+- interest
+	- P(j|I) - P(j)
+	- interest rules have high interest
+- hard part is to find frequent itemsets
+	- given confidence and support threshold
+- maximal frequent itemsets
+	- no immediate superset is frequent
+- closed itemsets
+
+Finding Frequent Itemsets
+- expensive computation
+- usually I/O
+- data processed in passes
+	- all baskets read in turn
+- number of passes matters
+- main memory matters
+	- limits number of things we can count
+- naive approach too much variations
+	- 4 byte per pair
+	- or 12 per occurring
+
+- only build on pairs that have good count before
+	- apriori
+
+PCY Park-Chen-Yu algorithm
+- in pass 1 of a-priori most memory idle
+- addition to itemcounts hash table with as many buckets as fit in memory
+- hash table for pairs
+- needs some luck to be better than a-priori
+- frequent itemsets with less passes? yes
+
+- random sampling
+	- take just random sample
+	- can do second pass
+- SON
+	- repeatedly small samples
+	- distributed data mining
+
 
 -------------------------------------------------------------------------------
                       Lecture 8 - ML at Scale #1
 -------------------------------------------------------------------------------
+
+- scalability
+- 3V
+- google play example
+- evolution of ml
+- lot of progress
+- sensitive situations
+- learnt stuff instead of constant
+
+DS lifecycle
+- deploy model
+- training is offline
+- deployment is online
+- data featurized flows through the model
+- everything logged
+- policies for model usage
+- train without manual engagement
+
+ML Production Pipelines
+- trainign is just small part of entire process
+- used to help ml workflows
+- data verification is big issue
+- have to keep on monitoring
+- not one-way flows
+- cyclic in nature
+- way of thinking about ml solutions
+- TFX - tensorflow extended
+	- ExampleGen
+	- StatisticsGen
+	- SchemaGen
+	- ExampleValidator
+		- detect anomalies
+		- decide how to react
+	- Transform
+	- Trainer
+	- Evaluator
+	- Pusher
+
+Retraining and Lifelong Machine Learning
 
 
 -------------------------------------------------------------------------------

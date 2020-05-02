@@ -8,6 +8,7 @@ from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 from mlflow import log_metric, log_param, log_artifact
+from azureml.core import Workspace
 
 class DateTransformer(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -47,15 +48,18 @@ class Shifter(BaseEstimator, TransformerMixin):
 
 
 if __name__ == '__main__':
+    # create the client
     client = InfluxDBClient(host = 'influxus.itu.dk', port = 8086, username = 'lsda', password = 'icanonlyread')
     client.switch_database('orkney')
 
+    # get data
     results = client.query('SELECT * FROM "Generation" where time > now() - 8w ORDER BY time')
     points = results.get_points()
     values = results.raw['series'][0]["values"]
     columns = results.raw['series'][0]["columns"]
     generation_df = pd.DataFrame(values, columns = columns).set_index("time")
 
+    # prepare data
     preparation_pipeline = Pipeline([
         ('date_worker', DateTransformer()),
         ('shifter', Shifter())
@@ -64,6 +68,8 @@ if __name__ == '__main__':
     processed_data = preparation_pipeline.fit_transform(generation_df)
 
     dim1, dim2 = processed_data[0].shape
+
+    # train data
 
     lreg_model = Lasso().fit(processed_data[0].iloc[:int(0.8*dim1)], processed_data[1][:int(0.8 * dim1)])
     print(lreg_model.score(processed_data[0].loc[int(0.8 * dim1):], processed_data[1][int(0.8 * dim1):]))
@@ -75,3 +81,4 @@ if __name__ == '__main__':
     with open('output.txt', 'w') as f:
         f.write("Hello World!")
     log_artifact("output.txt")
+
