@@ -1,0 +1,290 @@
+-------------------------------------------------------------------------------
+         Lecture 1 - Analytics, Data Mining and Machine Learning
+-------------------------------------------------------------------------------
+
+- python gaining popularity with ds modules
+
+Analytics
+- discovery - data prep - model planning - model building - communicate results - operationalize
+- data exploration
+	- visual analytics
+		- density depends on diaplay size
+		- overview, zoom&filter, details-on-demand
+	- OLAP On-Line Analytical Processing
+
+- data minign and ml
+	- dm -> constructing models
+	- ml -> cobstructing models based on training data in order to make predictions without actually being trained
+
+	- results 
+		- descriptive
+		- predictive
+		- prescriptive
+
+Big Data
+- ITU Big data
+- lambda architecture
+	- batch layer
+		- data collection
+		- data cleaning
+		- extraction, transfer, load
+		- wrangling
+			- maintenance
+			- integration
+	- serving layer
+		- views
+	- speed layer
+		 - real-time views
+- pipelines
+- closed world vs open world assumption
+	- closed world assumption
+		- everything in the db is true, not stored is false
+		- example
+			- learnit db, registration to exams
+				- on the list -> registered
+				- not on the list -> not registered
+	- open world assumption
+		- everythign stored in the db might or might not be true
+		- what is not stored also
+		- example: data from twitter users takign cabs in NYC
+			- content is a sample
+			- needs probabilistic thinking
+
+Decisions, predictions
+- decision-making under uncertainity
+	- system 1 vs system 2
+	- anatomy of decision
+		- input, judgment, training, prediction, action, outcome
+	- reward functions
+- causation ladder
+	- association
+	- intervention
+	- counterfactuals
+- 3rd wave of AI
+	- symbolic AI -> statistical AI -> explainable AI
+
+Large Scale
+- volume, variety, velocity
+- dealing with volume
+	- partitioning
+	- resource management
+	- job scheduling
+	- failure handling / recovery
+	- programming model
+- decoupled stack
+- traditional vs streaming dbms
+	- query vs data as input
+
+-------------------------------------------------------------------------------
+                 Lecture 2 - Machine Learning in Context
+-------------------------------------------------------------------------------
+
+The Narrow View on ML
+- estimates function
+- supervised
+- cross-validation
+- ml vs dl
+- patterns in data
+	- clusters
+	- rankings
+	- PCA
+	- correlations
+	- classes
+- feature engineering
+	- most models need it to be structured
+	- raw data as feature vector
+- curse of dimensionality
+	- solution: dimensionality reduction
+- weak supervision
+	- personal data is critical -> black box
+	- large scale cant label manually
+	- probabilistic labels for trainign data
+- kernels
+- pipelines
+	- sequence of asynchronous batch processes
+
+Broader View
+- raw data
+- making data for analysis
+- programming frameworks
+- tf, pytorch
+- GPUm SIMD, VNNI, TPU
+- ML models
+	- software made out of data
+- software lifecycle
+- pipeline as a sequence of transforms followed by an estimator
+
+-------------------------------------------------------------------------------
+             Lecture 3 - Rows, Columns, Matrices and Tensors
+-------------------------------------------------------------------------------
+
+- data, operators and representations
+
+Trends, Convergence
+- AI, HPC, High Performance Data Analytic
+- unified cluster architecture
+	- simulation, AI, Analytics
+- intuition: 
+	- same forms of operations
+		- n dimensional arrays
+	- same need for efficiency
+		- paralellism
+			- dataflow engine
+			- minimizing data movement
+		- diverse hardware
+			- CPU, GPU, TPU, NPU
+- dataflow paralellism
+- convergence
+	- from db and ML/DB 
+	- to DB & DL/ML on cloud/HPC
+- DAPHNE project
+
+HPC Simulation and Modeling
+- finite element method
+- same iterations to minimize error function
+
+ML/DL
+- same ops
+- NN as a series of algebraic operations performed on input tensor to get output tensor
+- sparse vs dense matrices
+- tensors
+	- vector 1d-tensor
+	- matric 2d-tensor
+	- 3d-tensor
+	- 4d-tensor
+	- 5d-tensor...
+- basic operations on tensors
+	- extensions to standard linear algebra
+	- multi-way tensor outer product
+	- tensor inner product
+	- Kronecker
+		- element-per-matrix product
+	- Kathri-Rao product
+	- Hadamard
+
+High Performance Data Analytics
+- relational algebra
+- dealing with volume
+
+- column vs row store
+- life of a query
+	- parse and rewrite
+	- generate logical plan
+	- generate physical plan
+	- execute query
+- is it about avoiding worse plans
+- enumeration of query plans
+- pipeline whenever possible
+- operators does not have to work on all data
+- scan -> select -> project -> sort -> result
+- volcano iterator model
+- pull-based execution
+- tuple-at-a-time iteration
+- all when single core servers
+- NOW: multiple cores
+- careful data partitioning
+- results aggregated after
+
+- or different cores do different stuff
+- one-at-a-time vs vectorized
+- pipelining vs materializing
+- pull based vs push based
+
+-------------------------------------------------------------------------------
+                    Lecture 4 - DataFlow Engines
+-------------------------------------------------------------------------------
+
+Data Flow Architecture
+- data and program into cpu
+- von Neumann architecture
+- parallel computer architectures
+	- from instruction set to communication architecture
+- shared memory
+- dataflow architectures
+	- asynchronous and functional
+- dataflow programming
+	- program as a dag of operations
+	- operations as functions
+	- data flowing through the graph
+
+Commodity Clusters
+- web data sets can be very large
+- cannot mine on single server
+- cluster of commodity linux nodes
+- gigabot ethernet interconnects
+
+- what if node failure?
+- distributed storage
+- chunks on servers
+- master node
+- client library to access
+
+- word count example
+- one word to a line
+- what fits in memory?
+- naturally paralellizable
+
+- map step
+- then groups by key
+- then reduce
+- input: set of key, value pairs
+- output: set of key, value2 pairs
+
+- master, workers 
+- input, final output are stored on a distributed file system
+- intermediate results are stored on local FS
+
+- coordination
+	- master schedules tasks
+	- idle tasks get scheduled as workers become available
+	- master pushes values to reducers
+	- master pings workers periodically
+- common practice is make M and R larger than number of nodes
+- usually R is smaller
+
+- combiners
+- preaggregations on mappers
+	- fx popular words
+- for reduce same intermediate keys should be on the same nodes
+
+- Hadoop ecosystem with YARN
+- big data frameworks, Spark
+
+-------------------------------------------------------------------------------
+                          Lecture 5 - Spark
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+                    Lecture 6 - OLAP/HTAP at Scale
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+                 Lecture 7 - Mining Massive Data Sets
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+                      Lecture 8 - ML at Scale #1
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+                      Lecture 9 - ML at Scale #2
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+         Lecture 10 - Explainability, Reproducibility and Validation
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+                  Lecture 11 - Casual Inference at Scale
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+                 Lecture 12 - Data Science and Epidemology
+-------------------------------------------------------------------------------
