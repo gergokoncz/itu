@@ -490,12 +490,80 @@ ML Production Pipelines
 	- Pusher
 
 Retraining and Lifelong Machine Learning
+- test if model with retrained data works better or worst
+- single-shot ml is not enough
+- general AI should be able to learn as we do
+- not retrained model is a limitation of AI
+- weak supervision is cool :)
+- train model -> package it -> validate -> deploy -> monitor ( -> retrain at some point)
+- MLOps with azure
+- monitoring might trigger retraining
+
+- by retraining don't change the applocation just the model
+	- change training data, maybe parameters
+	- on schedule or when new data becomes available
+	- compare to existing
+	- efficiently go from one to another model
+	- register model
+
+Lifelong ML
+- retain knowledge from previous models
+- bit of a disappoinment
 
 
 -------------------------------------------------------------------------------
                       Lecture 9 - ML at Scale #2
 -------------------------------------------------------------------------------
 
+Scalable Linear Algebra Systems
+- linear algebra relevant to ml
+- all cool if data fits into memory
+- if not dustributed matrices
+	- row wise decomposition
+	- columwise distribution
+	- checkerboard decomposition
+- parallel operations
+	- unary operations without communication
+	- unary with communication
+	- binary communications
+	- matrix multiplication is expensive as shit
+
+Pipelines
+- LA operations can be composed into pipelines
+- careful about order
+
+Scalable LA Sytems
+- spark-based
+	- MLlib
+		- uses Breeze LA package
+		- distributed matrix APIs
+			- RowMatrix
+			- CoordinateMatrix
+			- IndexedRowMatrix
+			- BlockMatrix
+	- SparkFlow
+	- pandas UDFs
+	- SystemML, SystemDS
+		- declarative language
+		- runtime compiler
+		- distinction between ds and ml
+		- hierarchy of abstractions for DS tasks
+		- domain experts -> data scientists -> ML researchers
+- non spark-based
+	- MADLib
+	- ScaLAPACK
+	- pbdR
+
+Weak Supervision
+- how to scale labelling
+- traditonal does not scale
+- learn what is easy to label what is hard
+- estimate noisiness
+- integarte diverse sources
+	- labels
+	- functions
+	- rules
+- snorkel
 
 -------------------------------------------------------------------------------
          Lecture 10 - Explainability, Reproducibility and Validation

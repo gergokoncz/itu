@@ -1,5 +1,5 @@
 from sklearn.base import BaseEstimator, TransformerMixin
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta 
 
 class DateTransformer(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -18,21 +18,21 @@ class DateTransformer(BaseEstimator, TransformerMixin):
         X['minute'] = X['datetime'].apply(lambda x: x.minute)
         X['day_of_week'] = X['datetime'].apply(lambda x: x.dayofweek)
         y = X['Total']
-        return X[['year', 'month', 'day', 'hour', 'minute', 'day_of_week', 'Total']], y
+        return X[['time', 'year', 'month', 'day', 'hour', 'minute', 'day_of_week', 'Total']], y
 
 class Shifter(BaseEstimator, TransformerMixin):
     def __init__(self):
         None
     
-    def fit(self, X, y = None, hours = 3):
+    def fit(self, X, y = None, days = 3):
         return self
 
-    def fit_transform(self, X, y = None, hours = 3):
+    def fit_transform(self, X, y = None, days = 3):
         X = X[0]
-        for i in range(hours):
-            colname = f"{i+1}hourback"
-            X[colname] = X['Total'].shift(60 * (-i-1))
+        for i in range(days):
+            colname = f"{i+1}dayback"
+            X[colname] = X['Total'].shift(1440 * (-i-1))
         X = X.dropna()
         y = X['Total']
-        X = X.drop(columns = ['Total'], axis = 1)
+        #X = X.drop(columns = ['Total'], axis = 1)
         return X, y
