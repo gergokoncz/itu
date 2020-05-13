@@ -34,3 +34,28 @@ class Shifter(BaseEstimator, TransformerMixin):
         y = X['Total']
         #X = X.drop(columns = ['Total'], axis = 1)
         return X, y
+
+
+class HourlyAggregator(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        None
+    
+    def fit(self, X, y = None):
+        return self
+
+    def transform(self, X, y = None):
+        X_grouped = X.groupby(['year', 'month', 'day', 'hour']).mean()['Total']
+        for i in range(4)[::-1]:
+            X_grouped = X_grouped.reset_index(level = i)
+        
+        X_grouped['datetime'] = X_grouped.apply(datetime_builder, axis = 1)
+        X_grouped['day_of_week'] = X_grouped['datetime'].apply(lambda x: x.dayofweek)
+        y = X_grouped['Total']
+        #X = X.drop(columns = ['Total'], axis = 1)
+        return X_grouped.set_index('datetime')
+
+def datetime_builder(x):
+    try:
+        return datetime(year = int(x['year']), month = int(x['month']), day = int(x['day']), hour = int(x['hour']))
+    except:
+        print(x)
