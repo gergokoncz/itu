@@ -17,8 +17,7 @@ class DateTransformer(BaseEstimator, TransformerMixin):
         X['hour'] = X['datetime'].apply(lambda x: x.hour)
         X['minute'] = X['datetime'].apply(lambda x: x.minute)
         X['day_of_week'] = X['datetime'].apply(lambda x: x.dayofweek)
-        y = X['Total']
-        return X[['time', 'year', 'month', 'day', 'hour', 'minute', 'day_of_week', 'Total']], y
+        return X.set_index('datetime')
 
 class Shifter(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -28,10 +27,9 @@ class Shifter(BaseEstimator, TransformerMixin):
         return self
 
     def fit_transform(self, X, y = None, days = 3):
-        X = X[0]
         for i in range(days):
             colname = f"{i+1}dayback"
-            X[colname] = X['Total'].shift(1440 * (-i-1))
+            X[colname] = X['Total'].shift(i+1, freq = 'D')
         X = X.dropna()
         y = X['Total']
         #X = X.drop(columns = ['Total'], axis = 1)
