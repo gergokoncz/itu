@@ -1,5 +1,7 @@
 from sklearn.base import BaseEstimator, TransformerMixin
-from datetime import datetime, timedelta 
+from datetime import datetime, timedelta
+import pandas as pd
+import numpy as np
 
 class DateTransformer(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -23,13 +25,13 @@ class Shifter(BaseEstimator, TransformerMixin):
     def __init__(self):
         None
     
-    def fit(self, X, y = None, days = 3):
+    def fit(self, X, y = None, weeks = 2):
         return self
 
-    def fit_transform(self, X, y = None, days = 3):
-        for i in range(days):
-            colname = f"{i+1}dayback"
-            X[colname] = X['Total'].shift(i+1, freq = 'D')
+    def fit_transform(self, X, y = None, weeks = 2):
+        for i in range(weeks):
+            colname = f"{i+1}weekback"
+            X[colname] = X['Total'].shift((i+1) * 7, freq = 'D')
         X = X.dropna()
         y = X['Total']
         #X = X.drop(columns = ['Total'], axis = 1)
@@ -53,6 +55,36 @@ class HourlyAggregator(BaseEstimator, TransformerMixin):
         y = X_grouped['Total']
         #X = X.drop(columns = ['Total'], axis = 1)
         return X_grouped.set_index('datetime')
+
+
+class DummyEncoder(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        None
+    
+    def fit(self, X, y = None):
+        return self
+
+    def transform(self, X, y = None):
+        for col in ['year', 'month', 'day', 'hour', 'day_of_week']:
+            X = X.join(pd.get_dummies(X[col], prefix=col))
+        y = X['Total']
+        #X = X.drop(columns = ['Total'], axis = 1)
+        return X
+
+class DateTrendsAdder(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        None
+    
+    def fit(self, X, y = None):
+        return self
+
+    def transform(self, X, y = None):
+        X['distance_from_july'] = X['month'].apply(lambda x: np.abs(x - 7))
+        X['is_week_day'] = X['day_of_week'].apply(lambda x: 1 if x in [0,1,2,3,4] else 0)
+        X['is_day'] =  X['hour'].apply(lambda x: 1 if x > 6 and x < 21 else 0)
+        y = X['Total']
+        #X = X.drop(columns = ['Total'], axis = 1)
+        return X
 
 def datetime_builder(x):
     try:

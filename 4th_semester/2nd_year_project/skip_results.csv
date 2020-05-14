@@ -1,0 +1,601 @@
+,train,test,column,skipped,model,acc1,acc2,acc3,mean_acc,accuracy
+0,electronics,home,raw,none,cnn,"0,895","0,906",,"0,9005",0.9005
+1,electronics,lego,raw,none,cnn,"0,934","0,933",,"0,9335",0.9335
+2,electronics,toys,raw,none,cnn,"0,91","0,914",,"0,912",0.912
+3,electronics,electronics,raw,none,cnn,"0,92","0,927",,"0,9235",0.9235
+4,combined,home,raw,none,cnn,"0,884",,,"0,884",0.884
+5,combined,lego,raw,none,cnn,"0,916",,,"0,916",0.916
+6,combined,toys,raw,none,cnn,"0,905",,,"0,905",0.905
+7,combined,electronics,raw,none,cnn,"0,904",,,"0,904",0.904
+8,electronics,home,pos,none,cnn,"0,712","0,701",,"0,7065",0.7065
+9,electronics,lego,pos,none,cnn,"0,767","0,768",,"0,7675",0.7675
+10,electronics,toys,pos,none,cnn,"0,725","0,735",,"0,73",0.73
+11,electronics,electronics,pos,none,cnn,"0,757","0,763",,"0,76",0.76
+12,combined,home,pos,none,cnn,"0,703",,,"0,703",0.703
+13,combined,lego,pos,none,cnn,"0,777",,,"0,777",0.777
+14,combined,toys,pos,none,cnn,"0,724",,,"0,724",0.724
+15,combined,electronics,pos,none,cnn,"0,763",,,"0,763",0.763
+16,electronics,home,combined,none,cnn,"0,893","0,896",,"0,8945",0.8945
+17,electronics,lego,combined,none,cnn,"0,925","0,921",,"0,923",0.923
+18,electronics,toys,combined,none,cnn,"0,909","0,914",,"0,9115",0.9115
+19,electronics,electronics,combined,none,cnn,"0,924","0,923",,"0,9235",0.9235
+20,combined,home,combined,none,cnn,"0,896",,,"0,896",0.896
+21,combined,lego,combined,none,cnn,"0,928",,,"0,928",0.928
+22,combined,toys,combined,none,cnn,"0,911",,,"0,911",0.911
+23,combined,electronics,combined,none,cnn,"0,924",,,"0,924",0.924
+24,electronics,home,raw,none,cbow,"0,864","0,851",,"0,8575",0.8575
+25,electronics,lego,raw,none,cbow,"0,908","0,911",,"0,9095",0.9095
+26,electronics,toys,raw,none,cbow,"0,886","0,884",,"0,885",0.885
+27,electronics,electronics,raw,none,cbow,"0,903","0,901",,"0,902",0.902
+28,combined,home,raw,none,cbow,"0,863",,,"0,863",0.863
+29,combined,lego,raw,none,cbow,"0,913",,,"0,913",0.913
+30,combined,toys,raw,none,cbow,"0,884",,,"0,884",0.884
+31,combined,electronics,raw,none,cbow,"0,903",,,"0,903",0.903
+32,electronics,home,pos,none,cbow,"0,655","0,652",,"0,6535",0.6535
+33,electronics,lego,pos,none,cbow,"0,787","0,792",,"0,7895",0.7895
+34,electronics,toys,pos,none,cbow,"0,705","0,703",,"0,704",0.704
+35,electronics,electronics,pos,none,cbow,"0,715","0,709",,"0,712",0.712
+36,combined,home,pos,none,cbow,"0,641",,,"0,641",0.641
+37,combined,lego,pos,none,cbow,"0,768",,,"0,768",0.768
+38,combined,toys,pos,none,cbow,"0,687",,,"0,687",0.687
+39,combined,electronics,pos,none,cbow,"0,695",,,"0,695",0.695
+40,electronics,home,combined,none,cbow,"0,862","0,856",,"0,859",0.859
+41,electronics,lego,combined,none,cbow,"0,898","0,904",,"0,901",0.901
+42,electronics,toys,combined,none,cbow,"0,884","0,882",,"0,883",0.883
+43,electronics,electronics,combined,none,cbow,"0,904","0,902",,"0,903",0.903
+44,combined,home,combined,none,cbow,"0,86",,,"0,86",0.86
+45,combined,lego,combined,none,cbow,"0,906",,,"0,906",0.906
+46,combined,toys,combined,none,cbow,"0,876",,,"0,876",0.876
+47,combined,electronics,combined,none,cbow,"0,8995",,,"0,8995",0.8995
+48,electronics,home,raw,none,cnn_gru,"0,898","0,901",,"0,8995",0.8995
+49,electronics,lego,raw,none,cnn_gru,"0,935","0,934",,"0,9345",0.9345
+50,electronics,toys,raw,none,cnn_gru,"0,914","0,91",,"0,912",0.912
+51,electronics,electronics,raw,none,cnn_gru,"0,933","0,93",,"0,9315",0.9315
+52,combined,home,raw,none,cnn_gru,"0,902",,,"0,902",0.902
+53,combined,lego,raw,none,cnn_gru,"0,921",,,"0,921",0.921
+54,combined,toys,raw,none,cnn_gru,"0,921",,,"0,921",0.921
+55,combined,electronics,raw,none,cnn_gru,"0,927",,,"0,927",0.927
+56,electronics,home,pos,none,cnn_gru,"0,709","0,696",,"0,7025",0.7025
+57,electronics,lego,pos,none,cnn_gru,"0,821","0,824",,"0,8225",0.8225
+58,electronics,toys,pos,none,cnn_gru,"0,762","0,753",,"0,7575",0.7575
+59,electronics,electronics,pos,none,cnn_gru,"0,782","0,776",,"0,779",0.779
+60,combined,home,pos,none,cnn_gru,"0,704",,,"0,704",0.704
+61,combined,lego,pos,none,cnn_gru,"0,8046",,,"0,8046",0.8046
+62,combined,toys,pos,none,cnn_gru,"0,7535",,,"0,7535",0.7535
+63,combined,electronics,pos,none,cnn_gru,"0,7735",,,"0,7735",0.7735
+64,electronics,home,combined,none,cnn_gru,"0,9","0,871",,"0,8855",0.8855
+65,electronics,lego,combined,none,cnn_gru,"0,929","0,922",,"0,9255",0.9255
+66,electronics,toys,combined,none,cnn_gru,"0,916","0,902",,"0,909",0.909
+67,electronics,electronics,combined,none,cnn_gru,"0,927","0,928",,"0,9275",0.9275
+68,combined,home,combined,none,cnn_gru,"0,90525",,,"0,90525",0.90525
+69,combined,lego,combined,none,cnn_gru,"0,926",,,"0,926",0.926
+70,combined,toys,combined,none,cnn_gru,"0,911",,,"0,911",0.911
+71,combined,electronics,combined,none,cnn_gru,"0,925",,,"0,925",0.925
+72,electronics,home,raw,none,lstm,"0,883","0,894",,"0,8885",0.8885
+73,electronics,lego,raw,none,lstm,"0,876","0,926",,"0,901",0.901
+74,electronics,toys,raw,none,lstm,"0,902","0,915",,"0,9085",0.9085
+75,electronics,electronics,raw,none,lstm,"0,917","0,927",,"0,922",0.922
+76,combined,home,raw,none,lstm,"0,8855",,,"0,8855",0.8855
+77,combined,lego,raw,none,lstm,"0,928",,,"0,928",0.928
+78,combined,toys,raw,none,lstm,"0,909",,,"0,909",0.909
+79,combined,electronics,raw,none,lstm,"0,923",,,"0,923",0.923
+80,electronics,home,pos,none,lstm,"0,675","0,677",,"0,676",0.676
+81,electronics,lego,pos,none,lstm,"0,78","0,783",,"0,7815",0.7815
+82,electronics,toys,pos,none,lstm,"0,711","0,723",,"0,717",0.717
+83,electronics,electronics,pos,none,lstm,"0,737","0,741",,"0,739",0.739
+84,combined,home,pos,none,lstm,"0,668",,,"0,668",0.668
+85,combined,lego,pos,none,lstm,"0,824",,,"0,824",0.824
+86,combined,toys,pos,none,lstm,"0,725",,,"0,725",0.725
+87,combined,electronics,pos,none,lstm,"0,739",,,"0,739",0.739
+88,electronics,home,combined,none,lstm,"0,891","0,891",,"0,891",0.891
+89,electronics,lego,combined,none,lstm,"0,928","0,928",,"0,928",0.928
+90,electronics,toys,combined,none,lstm,"0,911","0,902",,"0,9065",0.9065
+91,electronics,electronics,combined,none,lstm,"0,925","0,924",,"0,9245",0.9245
+92,combined,home,combined,none,lstm,"0,885",,,"0,885",0.885
+93,combined,lego,combined,none,lstm,"0,936",,,"0,936",0.936
+94,combined,toys,combined,none,lstm,"0,908",,,"0,908",0.908
+95,combined,electronics,combined,none,lstm,"0,924",,,"0,924",0.924
+96,electronics,home,raw,none,gru,"0,903","0,894",,"0,8985",0.8985
+97,electronics,lego,raw,none,gru,"0,928","0,928",,"0,928",0.928
+98,electronics,toys,raw,none,gru,"0,933","0,914",,"0,9235",0.9235
+99,electronics,electronics,raw,none,gru,"0,919","0,926",,"0,9225",0.9225
+100,combined,home,raw,none,gru,"0,893",,,"0,893",0.893
+101,combined,lego,raw,none,gru,"0,921",,,"0,921",0.921
+102,combined,toys,raw,none,gru,"0,918",,,"0,918",0.918
+103,combined,electronics,raw,none,gru,"0,928",,,"0,928",0.928
+104,electronics,home,pos,none,gru,"0,679","0,694",,"0,6865",0.6865
+105,electronics,lego,pos,none,gru,"0,827","0,806",,"0,8165",0.8165
+106,electronics,toys,pos,none,gru,"0,739","0,748",,"0,7435",0.7435
+107,electronics,electronics,pos,none,gru,"0,755","0,758",,"0,7565",0.7565
+108,combined,home,pos,none,gru,"0,692",,,"0,692",0.692
+109,combined,lego,pos,none,gru,"0,794",,,"0,794",0.794
+110,combined,toys,pos,none,gru,"0,745",,,"0,745",0.745
+111,combined,electronics,pos,none,gru,"0,768",,,"0,768",0.768
+112,electronics,home,combined,none,gru,"0,899","0,9",,"0,8995",0.8995
+113,electronics,lego,combined,none,gru,"0,927","0,934",,"0,9305",0.9305
+114,electronics,toys,combined,none,gru,"0,913","0,913",,"0,913",0.913
+115,electronics,electronics,combined,none,gru,"0,929","0,922",,"0,9255",0.9255
+116,combined,home,combined,none,gru,"0,894",,,"0,894",0.894
+117,combined,lego,combined,none,gru,"0,931",,,"0,931",0.931
+118,combined,toys,combined,none,gru,"0,922",,,"0,922",0.922
+119,combined,electronics,combined,none,gru,"0,928",,,"0,928",0.928
+120,electronics,home,raw,ADJ,cnn,"0,87","0,867","0,875","0,8706666667",0.8706666667
+121,electronics,lego,raw,ADJ,cnn,"0,885","0,842","0,879","0,8686666667",0.8686666667
+122,electronics,toys,raw,ADJ,cnn,"0,884","0,886","0,88","0,8833333333",0.8833333333
+123,electronics,electronics,raw,ADJ,cnn,"0,904","0,895","0,915","0,9046666667",0.9046666667
+124,electronics,home,raw,onlyADJ,cnn,"0,797","0,804","0,808","0,803",0.803
+125,electronics,lego,raw,onlyADJ,cnn,"0,884","0,832","0,846","0,854",0.854
+126,electronics,toys,raw,onlyADJ,cnn,"0,803","0,785","0,801","0,7963333333",0.7963333333
+127,electronics,electronics,raw,onlyADJ,cnn,"0,823","0,814","0,82","0,819",0.819
+128,electronics,home,pos,ADJ,cnn,"0,695","0,673","0,674","0,6806666667",0.6806666667
+129,electronics,lego,pos,ADJ,cnn,"0,794","0,82","0,734","0,7826666667",0.7826666667
+130,electronics,toys,pos,ADJ,cnn,"0,731","0,715","0,701","0,7156666667",0.7156666667
+131,electronics,electronics,pos,ADJ,cnn,"0,755","0,744","0,745","0,748",0.748
+132,electronics,home,pos,onlyADJ,cnn,"0,602","0,602","0,602","0,602",0.602
+133,electronics,lego,pos,onlyADJ,cnn,"0,817","0,818","0,818","0,8176666667",0.8176666667
+134,electronics,toys,pos,onlyADJ,cnn,"0,673","0,674","0,674","0,6736666667",0.6736666667
+135,electronics,electronics,pos,onlyADJ,cnn,"0,672","0,672","0,672","0,672",0.672
+136,electronics,home,combined,ADJ,cnn,"0,873","0,868","0,886","0,8756666667",0.8756666667
+137,electronics,lego,combined,ADJ,cnn,"0,867","0,862","0,891","0,8733333333",0.8733333333
+138,electronics,toys,combined,ADJ,cnn,"0,88","0,861","0,878","0,873",0.873
+139,electronics,electronics,combined,ADJ,cnn,"0,905","0,905","0,91","0,9066666667",0.9066666667
+140,electronics,home,combined,onlyADJ,cnn,"0,804","0,807","0,808","0,8063333333",0.8063333333
+141,electronics,lego,combined,onlyADJ,cnn,"0,817","0,878","0,833","0,8426666667",0.8426666667
+142,electronics,toys,combined,onlyADJ,cnn,"0,776","0,803","0,788","0,789",0.789
+143,electronics,electronics,combined,onlyADJ,cnn,"0,816","0,821","0,817","0,818",0.818
+144,electronics,home,raw,ADJ,cbow,"0,828","0,833","0,832","0,831",0.831
+145,electronics,lego,raw,ADJ,cbow,"0,839","0,885","0,871","0,865",0.865
+146,electronics,toys,raw,ADJ,cbow,"0,847","0,851","0,86","0,8526666667",0.8526666667
+147,electronics,electronics,raw,ADJ,cbow,"0,875","0,878","0,883","0,8786666667",0.8786666667
+148,electronics,home,raw,onlyADJ,cbow,"0,666","0,781","0,768","0,7383333333",0.7383333333
+149,electronics,lego,raw,onlyADJ,cbow,"0,861","0,899","0,705","0,8216666667",0.8216666667
+150,electronics,toys,raw,onlyADJ,cbow,"0,726","0,81","0,688","0,7413333333",0.7413333333
+151,electronics,electronics,raw,onlyADJ,cbow,"0,731","0,815","0,716","0,754",0.754
+152,electronics,home,pos,ADJ,cbow,"0,626","0,615","0,615","0,6186666667",0.6186666667
+153,electronics,lego,pos,ADJ,cbow,"0,819","0,802","0,8","0,807",0.807
+154,electronics,toys,pos,ADJ,cbow,"0,689","0,677","0,686","0,684",0.684
+155,electronics,electronics,pos,ADJ,cbow,"0,7","0,695","0,705","0,7",0.7
+156,electronics,home,pos,onlyADJ,cbow,"0,602","0,602","0,602","0,602",0.602
+157,electronics,lego,pos,onlyADJ,cbow,"0,817","0,786","0,818","0,807",0.807
+158,electronics,toys,pos,onlyADJ,cbow,"0,673","0,668","0,674","0,6716666667",0.6716666667
+159,electronics,electronics,pos,onlyADJ,cbow,"0,672","0,67","0,672","0,6713333333",0.6713333333
+160,electronics,home,combined,ADJ,cbow,"0,835","0,835","0,835","0,835",0.835
+161,electronics,lego,combined,ADJ,cbow,"0,864","0,877","0,864","0,8683333333",0.8683333333
+162,electronics,toys,combined,ADJ,cbow,"0,859","0,856","0,859","0,858",0.858
+163,electronics,electronics,combined,ADJ,cbow,"0,886","0,886","0,881","0,8843333333",0.8843333333
+164,electronics,home,combined,onlyADJ,cbow,"0,704","0,801","0,801","0,7686666667",0.7686666667
+165,electronics,lego,combined,onlyADJ,cbow,"0,603","0,83","0,849","0,7606666667",0.7606666667
+166,electronics,toys,combined,onlyADJ,cbow,"0,598","0,781","0,79","0,723",0.723
+167,electronics,electronics,combined,onlyADJ,cbow,"0,623","0,816","0,822","0,7536666667",0.7536666667
+168,electronics,home,raw,ADJ,cnn_gru,"0,872","0,879","0,881","0,8773333333",0.8773333333
+169,electronics,lego,raw,ADJ,cnn_gru,"0,872","0,849","0,88","0,867",0.867
+170,electronics,toys,raw,ADJ,cnn_gru,"0,874","0,879","0,893","0,882",0.882
+171,electronics,electronics,raw,ADJ,cnn_gru,"0,91","0,909","0,919","0,9126666667",0.9126666667
+172,electronics,home,raw,onlyADJ,cnn_gru,"0,805","0,812","0,805","0,8073333333",0.8073333333
+173,electronics,lego,raw,onlyADJ,cnn_gru,"0,833","0,808","0,841","0,8273333333",0.8273333333
+174,electronics,toys,raw,onlyADJ,cnn_gru,"0,79","0,775","0,8","0,7883333333",0.7883333333
+175,electronics,electronics,raw,onlyADJ,cnn_gru,"0,823","0,811","0,815","0,8163333333",0.8163333333
+176,electronics,home,pos,ADJ,cnn_gru,"0,715","0,734","0,735","0,728",0.728
+177,electronics,lego,pos,ADJ,cnn_gru,"0,781","0,813","0,806","0,8",0.8
+178,electronics,toys,pos,ADJ,cnn_gru,"0,749","0,763","0,757","0,7563333333",0.7563333333
+179,electronics,electronics,pos,ADJ,cnn_gru,"0,776","0,793","0,785","0,7846666667",0.7846666667
+180,electronics,home,pos,onlyADJ,cnn_gru,"0,602","0,602","0,602","0,602",0.602
+181,electronics,lego,pos,onlyADJ,cnn_gru,"0,817","0,817","0,818","0,8173333333",0.8173333333
+182,electronics,toys,pos,onlyADJ,cnn_gru,"0,673","0,674","0,674","0,6736666667",0.6736666667
+183,electronics,electronics,pos,onlyADJ,cnn_gru,"0,672","0,672","0,672","0,672",0.672
+184,electronics,home,combined,ADJ,cnn_gru,"0,885","0,881","0,882","0,8826666667",0.8826666667
+185,electronics,lego,combined,ADJ,cnn_gru,"0,881","0,879","0,872","0,8773333333",0.8773333333
+186,electronics,toys,combined,ADJ,cnn_gru,"0,892","0,893","0,895","0,8933333333",0.8933333333
+187,electronics,electronics,combined,ADJ,cnn_gru,"0,916","0,921","0,918","0,9183333333",0.9183333333
+188,electronics,home,combined,onlyADJ,cnn_gru,"0,806","0,804","0,814","0,808",0.808
+189,electronics,lego,combined,onlyADJ,cnn_gru,"0,817","0,879","0,834","0,8433333333",0.8433333333
+190,electronics,toys,combined,onlyADJ,cnn_gru,"0,776","0,803","0,788","0,789",0.789
+191,electronics,electronics,combined,onlyADJ,cnn_gru,"0,823","0,819","0,819","0,8203333333",0.8203333333
+192,electronics,home,raw,ADJ,lstm,"0,849","0,865",,"0,857",0.857
+193,electronics,lego,raw,ADJ,lstm,"0,87","0,876",,"0,873",0.873
+194,electronics,toys,raw,ADJ,lstm,"0,876","0,887",,"0,8815",0.8815
+195,electronics,electronics,raw,ADJ,lstm,"0,895","0,913",,"0,904",0.904
+196,electronics,home,raw,onlyADJ,lstm,"0,602","0,602",,"0,602",0.602
+197,electronics,lego,raw,onlyADJ,lstm,"0,817","0,817",,"0,817",0.817
+198,electronics,toys,raw,onlyADJ,lstm,"0,673","0,673",,"0,673",0.673
+199,electronics,electronics,raw,onlyADJ,lstm,"0,672","0,672",,"0,672",0.672
+200,electronics,home,pos,ADJ,lstm,"0,692","0,661",,"0,6765",0.6765
+201,electronics,lego,pos,ADJ,lstm,"0,804","0,758",,"0,781",0.781
+202,electronics,toys,pos,ADJ,lstm,"0,748","0,723",,"0,7355",0.7355
+203,electronics,electronics,pos,ADJ,lstm,"0,752","0,733",,"0,7425",0.7425
+204,electronics,home,pos,onlyADJ,lstm,"0,602","0,602",,"0,602",0.602
+205,electronics,lego,pos,onlyADJ,lstm,"0,817","0,817",,"0,817",0.817
+206,electronics,toys,pos,onlyADJ,lstm,"0,673","0,673",,"0,673",0.673
+207,electronics,electronics,pos,onlyADJ,lstm,"0,672","0,672",,"0,672",0.672
+208,electronics,home,combined,ADJ,lstm,"0,879","0,874",,"0,8765",0.8765
+209,electronics,lego,combined,ADJ,lstm,"0,887","0,896",,"0,8915",0.8915
+210,electronics,toys,combined,ADJ,lstm,"0,871","0,887",,"0,879",0.879
+211,electronics,electronics,combined,ADJ,lstm,"0,907","0,908",,"0,9075",0.9075
+212,electronics,home,combined,onlyADJ,lstm,"0,602","0,602",,"0,602",0.602
+213,electronics,lego,combined,onlyADJ,lstm,"0,817","0,817",,"0,817",0.817
+214,electronics,toys,combined,onlyADJ,lstm,"0,673","0,673",,"0,673",0.673
+215,electronics,electronics,combined,onlyADJ,lstm,"0,672","0,672",,"0,672",0.672
+216,electronics,home,raw,ADJ,gru,"0,875","0,881","0,875","0,877",0.877
+217,electronics,lego,raw,ADJ,gru,"0,895","0,864","0,879","0,8793333333",0.8793333333
+218,electronics,toys,raw,ADJ,gru,"0,882","0,888","0,884","0,8846666667",0.8846666667
+219,electronics,electronics,raw,ADJ,gru,"0,915","0,917","0,916","0,916",0.916
+220,electronics,home,raw,onlyADJ,gru,"0,602","0,812","0,812","0,742",0.742
+221,electronics,lego,raw,onlyADJ,gru,"0,817","0,852","0,826","0,8316666667",0.8316666667
+222,electronics,toys,raw,onlyADJ,gru,"0,673","0,797","0,793","0,7543333333",0.7543333333
+223,electronics,electronics,raw,onlyADJ,gru,"0,672","0,824","0,816","0,7706666667",0.7706666667
+224,electronics,home,pos,ADJ,gru,"0,706","0,725","0,716","0,7156666667",0.7156666667
+225,electronics,lego,pos,ADJ,gru,"0,825","0,803","0,805","0,811",0.811
+226,electronics,toys,pos,ADJ,gru,"0,756","0,761","0,755","0,7573333333",0.7573333333
+227,electronics,electronics,pos,ADJ,gru,"0,772","0,781","0,78","0,7776666667",0.7776666667
+228,electronics,home,pos,onlyADJ,gru,"0,602","0,602","0,602","0,602",0.602
+229,electronics,lego,pos,onlyADJ,gru,"0,817","0,786","0,818","0,807",0.807
+230,electronics,toys,pos,onlyADJ,gru,"0,673","0,668","0,674","0,6716666667",0.6716666667
+231,electronics,electronics,pos,onlyADJ,gru,"0,672","0,671","0,672","0,6716666667",0.6716666667
+232,electronics,home,combined,ADJ,gru,"0,874","0,88","0,871","0,875",0.875
+233,electronics,lego,combined,ADJ,gru,"0,877","0,887","0,862","0,8753333333",0.8753333333
+234,electronics,toys,combined,ADJ,gru,"0,864","0,885","0,885","0,878",0.878
+235,electronics,electronics,combined,ADJ,gru,"0,905","0,917","0,917","0,913",0.913
+236,electronics,home,combined,onlyADJ,gru,"0,602","0,81","0,805","0,739",0.739
+237,electronics,lego,combined,onlyADJ,gru,"0,817","0,845","0,858","0,84",0.84
+238,electronics,toys,combined,onlyADJ,gru,"0,673","0,795","0,794","0,754",0.754
+239,electronics,electronics,combined,onlyADJ,gru,"0,672","0,819","0,827","0,7726666667",0.7726666667
+240,electronics,home,raw,ADV,cnn,"0,902","0,898","0,871","0,8903333333",0.8903333333
+241,electronics,lego,raw,ADV,cnn,"0,923","0,911","0,922","0,9186666667",0.9186666667
+242,electronics,toys,raw,ADV,cnn,"0,915","0,906","0,887","0,9026666667",0.9026666667
+243,electronics,electronics,raw,ADV,cnn,"0,923","0,926","0,904","0,9176666667",0.9176666667
+244,electronics,home,raw,onlyADV,cnn,"0,721","0,715","0,72","0,7186666667",0.7186666667
+245,electronics,lego,raw,onlyADV,cnn,"0,755","0,729","0,751","0,745",0.745
+246,electronics,toys,raw,onlyADV,cnn,"0,757","0,743","0,74","0,7466666667",0.7466666667
+247,electronics,electronics,raw,onlyADV,cnn,"0,763","0,748","0,751","0,754",0.754
+248,electronics,home,pos,ADV,cnn,"0,687","0,679","0,686","0,684",0.684
+249,electronics,lego,pos,ADV,cnn,"0,797","0,811","0,788","0,7986666667",0.7986666667
+250,electronics,toys,pos,ADV,cnn,"0,732","0,732","0,732","0,732",0.732
+251,electronics,electronics,pos,ADV,cnn,"0,762","0,756","0,763","0,7603333333",0.7603333333
+252,electronics,home,pos,onlyADV,cnn,"0,602","0,602","0,602","0,602",0.602
+253,electronics,lego,pos,onlyADV,cnn,"0,818","0,818","0,817","0,8176666667",0.8176666667
+254,electronics,toys,pos,onlyADV,cnn,"0,673","0,674","0,673","0,6733333333",0.6733333333
+255,electronics,electronics,pos,onlyADV,cnn,"0,672","0,672","0,672","0,672",0.672
+256,electronics,home,combined,ADV,cnn,"0,898","0,89","0,906","0,898",0.898
+257,electronics,lego,combined,ADV,cnn,"0,916","0,915","0,923","0,918",0.918
+258,electronics,toys,combined,ADV,cnn,"0,912","0,905","0,914","0,9103333333",0.9103333333
+259,electronics,electronics,combined,ADV,cnn,"0,921","0,923","0,94","0,928",0.928
+260,electronics,home,combined,onlyADV,cnn,"0,724","0,717","0,714","0,7183333333",0.7183333333
+261,electronics,lego,combined,onlyADV,cnn,"0,724","0,732","0,77","0,742",0.742
+262,electronics,toys,combined,onlyADV,cnn,"0,734","0,734","0,75","0,7393333333",0.7393333333
+263,electronics,electronics,combined,onlyADV,cnn,"0,752","0,753","0,757","0,754",0.754
+264,electronics,home,raw,ADV,cbow,"0,864","0,861","0,857","0,8606666667",0.8606666667
+265,electronics,lego,raw,ADV,cbow,"0,854","0,903","0,905","0,8873333333",0.8873333333
+266,electronics,toys,raw,ADV,cbow,"0,87","0,881","0,88","0,877",0.877
+267,electronics,electronics,raw,ADV,cbow,"0,892","0,891","0,895","0,8926666667",0.8926666667
+268,electronics,home,raw,onlyADV,cbow,"0,624","0,683","0,62","0,6423333333",0.6423333333
+269,electronics,lego,raw,onlyADV,cbow,"0,819","0,826","0,822","0,8223333333",0.8223333333
+270,electronics,toys,raw,onlyADV,cbow,"0,691","0,747","0,693","0,7103333333",0.7103333333
+271,electronics,electronics,raw,onlyADV,cbow,"0,694","0,742","0,689","0,7083333333",0.7083333333
+272,electronics,home,pos,ADV,cbow,"0,642","0,648","0,652","0,6473333333",0.6473333333
+273,electronics,lego,pos,ADV,cbow,"0,797","0,812","0,805","0,8046666667",0.8046666667
+274,electronics,toys,pos,ADV,cbow,"0,703","0,707","0,698","0,7026666667",0.7026666667
+275,electronics,electronics,pos,ADV,cbow,"0,72","0,719","0,715","0,718",0.718
+276,electronics,home,pos,onlyADV,cbow,"0,602","0,602","0,602","0,602",0.602
+277,electronics,lego,pos,onlyADV,cbow,"0,818","0,817","0,818","0,8176666667",0.8176666667
+278,electronics,toys,pos,onlyADV,cbow,"0,674","0,673","0,673","0,6733333333",0.6733333333
+279,electronics,electronics,pos,onlyADV,cbow,"0,672","0,672","0,672","0,672",0.672
+280,electronics,home,combined,ADV,cbow,"0,85","0,866","0,866","0,8606666667",0.8606666667
+281,electronics,lego,combined,ADV,cbow,"0,92","0,914","0,899","0,911",0.911
+282,electronics,toys,combined,ADV,cbow,"0,87","0,88","0,878","0,876",0.876
+283,electronics,electronics,combined,ADV,cbow,"0,89","0,899","0,901","0,8966666667",0.8966666667
+284,electronics,home,combined,onlyADV,cbow,"0,649","0,701","0,713","0,6876666667",0.6876666667
+285,electronics,lego,combined,onlyADV,cbow,"0,83","0,816","0,742","0,796",0.796
+286,electronics,toys,combined,onlyADV,cbow,"0,713","0,754","0,723","0,73",0.73
+287,electronics,electronics,combined,onlyADV,cbow,"0,706","0,756","0,745","0,7356666667",0.7356666667
+288,electronics,home,raw,ADV,cnn_gru,"0,921","0,913","0,913","0,9156666667",0.9156666667
+289,electronics,lego,raw,ADV,cnn_gru,"0,925","0,929","0,914","0,9226666667",0.9226666667
+290,electronics,toys,raw,ADV,cnn_gru,"0,922","0,921","0,921","0,9213333333",0.9213333333
+291,electronics,electronics,raw,ADV,cnn_gru,"0,939","0,934","0,928","0,9336666667",0.9336666667
+292,electronics,home,raw,onlyADV,cnn_gru,"0,721","0,602","0,602","0,6416666667",0.6416666667
+293,electronics,lego,raw,onlyADV,cnn_gru,"0,757","0,817","0,817","0,797",0.797
+294,electronics,toys,raw,onlyADV,cnn_gru,"0,747","0,673","0,673","0,6976666667",0.6976666667
+295,electronics,electronics,raw,onlyADV,cnn_gru,"0,763","0,672","0,672","0,7023333333",0.7023333333
+296,electronics,home,pos,ADV,cnn_gru,"0,727","0,734","0,731","0,7306666667",0.7306666667
+297,electronics,lego,pos,ADV,cnn_gru,"0,799","0,807","0,813","0,8063333333",0.8063333333
+298,electronics,toys,pos,ADV,cnn_gru,"0,75","0,759","0,766","0,7583333333",0.7583333333
+299,electronics,electronics,pos,ADV,cnn_gru,"0,782","0,787","0,792","0,787",0.787
+300,electronics,home,pos,onlyADV,cnn_gru,"0,602","0,602","0,602","0,602",0.602
+301,electronics,lego,pos,onlyADV,cnn_gru,"0,818","0,817","0,817","0,8173333333",0.8173333333
+302,electronics,toys,pos,onlyADV,cnn_gru,"0,674","0,673","0,673","0,6733333333",0.6733333333
+303,electronics,electronics,pos,onlyADV,cnn_gru,"0,672","0,672","0,672","0,672",0.672
+304,electronics,home,combined,ADV,cnn_gru,"0,911","0,916","0,918","0,915",0.915
+305,electronics,lego,combined,ADV,cnn_gru,"0,907","0,932","0,925","0,9213333333",0.9213333333
+306,electronics,toys,combined,ADV,cnn_gru,"0,917","0,918","0,922","0,919",0.919
+307,electronics,electronics,combined,ADV,cnn_gru,"0,936","0,932","0,931","0,933",0.933
+308,electronics,home,combined,onlyADV,cnn_gru,"0,727","0,602","0,602","0,6436666667",0.6436666667
+309,electronics,lego,combined,onlyADV,cnn_gru,"0,75","0,817","0,817","0,7946666667",0.7946666667
+310,electronics,toys,combined,onlyADV,cnn_gru,"0,746","0,673","0,674","0,6976666667",0.6976666667
+311,electronics,electronics,combined,onlyADV,cnn_gru,"0,761","0,681","0,672","0,7046666667",0.7046666667
+312,electronics,home,raw,ADV,lstm,"0,907","0,888","0,882","0,8923333333",0.8923333333
+313,electronics,lego,raw,ADV,lstm,"0,902","0,886","0,918","0,902",0.902
+314,electronics,toys,raw,ADV,lstm,"0,91","0,897","0,887","0,898",0.898
+315,electronics,electronics,raw,ADV,lstm,"0,927","0,919","0,914","0,92",0.92
+316,electronics,home,raw,onlyADV,lstm,"0,602","0,602","0,602","0,602",0.602
+317,electronics,lego,raw,onlyADV,lstm,"0,817","0,817","0,817","0,817",0.817
+318,electronics,toys,raw,onlyADV,lstm,"0,674","0,673","0,673","0,6733333333",0.6733333333
+319,electronics,electronics,raw,onlyADV,lstm,"0,672","0,672","0,672","0,672",0.672
+320,electronics,home,pos,ADV,lstm,"0,719","0,705","0,709","0,711",0.711
+321,electronics,lego,pos,ADV,lstm,"0,785","0,827","0,802","0,8046666667",0.8046666667
+322,electronics,toys,pos,ADV,lstm,"0,744","0,742","0,722","0,736",0.736
+323,electronics,electronics,pos,ADV,lstm,"0,774","0,772","0,766","0,7706666667",0.7706666667
+324,electronics,home,pos,onlyADV,lstm,"0,602","0,602","0,602","0,602",0.602
+325,electronics,lego,pos,onlyADV,lstm,"0,818","0,817","0,817","0,8173333333",0.8173333333
+326,electronics,toys,pos,onlyADV,lstm,"0,674","0,673","0,674","0,6736666667",0.6736666667
+327,electronics,electronics,pos,onlyADV,lstm,"0,672","0,672","0,672","0,672",0.672
+328,electronics,home,combined,ADV,lstm,"0,89","0,896","0,846","0,8773333333",0.8773333333
+329,electronics,lego,combined,ADV,lstm,"0,894","0,907","0,904","0,9016666667",0.9016666667
+330,electronics,toys,combined,ADV,lstm,"0,9","0,898","0,864","0,8873333333",0.8873333333
+331,electronics,electronics,combined,ADV,lstm,"0,918","0,922","0,881","0,907",0.907
+332,electronics,home,combined,onlyADV,lstm,"0,602","0,602","0,602","0,602",0.602
+333,electronics,lego,combined,onlyADV,lstm,"0,818","0,817","0,817","0,8173333333",0.8173333333
+334,electronics,toys,combined,onlyADV,lstm,"0,674","0,673","0,673","0,6733333333",0.6733333333
+335,electronics,electronics,combined,onlyADV,lstm,"0,672","0,672","0,672","0,672",0.672
+336,electronics,home,raw,ADV,gru,"0,911","0,906","0,904","0,907",0.907
+337,electronics,lego,raw,ADV,gru,"0,905","0,916","0,926","0,9156666667",0.9156666667
+338,electronics,toys,raw,ADV,gru,"0,901","0,909","0,908","0,906",0.906
+339,electronics,electronics,raw,ADV,gru,"0,928","0,929","0,924","0,927",0.927
+340,electronics,home,raw,onlyADV,gru,"0,728","0,728","0,672","0,7093333333",0.7093333333
+341,electronics,lego,raw,onlyADV,gru,"0,777","0,776","0,817","0,79",0.79
+342,electronics,toys,raw,onlyADV,gru,"0,754","0,75","0,673","0,7256666667",0.7256666667
+343,electronics,electronics,raw,onlyADV,gru,"0,769","0,768","0,672","0,7363333333",0.7363333333
+344,electronics,home,pos,ADV,gru,"0,717","0,704","0,709","0,71",0.71
+345,electronics,lego,pos,ADV,gru,"0,805","0,767","0,765","0,779",0.779
+346,electronics,toys,pos,ADV,gru,"0,751","0,724","0,734","0,7363333333",0.7363333333
+347,electronics,electronics,pos,ADV,gru,"0,783","0,757","0,769","0,7696666667",0.7696666667
+348,electronics,home,pos,onlyADV,gru,"0,602","0,605","0,602","0,603",0.603
+349,electronics,lego,pos,onlyADV,gru,"0,818","0,818","0,817","0,8176666667",0.8176666667
+350,electronics,toys,pos,onlyADV,gru,"0,674","0,673","0,673","0,6733333333",0.6733333333
+351,electronics,electronics,pos,onlyADV,gru,"0,672","0,67","0,672","0,6713333333",0.6713333333
+352,electronics,home,combined,ADV,gru,"0,901","0,918","0,896","0,905",0.905
+353,electronics,lego,combined,ADV,gru,"0,93","0,922","0,926","0,926",0.926
+354,electronics,toys,combined,ADV,gru,"0,918","0,921","0,904","0,9143333333",0.9143333333
+355,electronics,electronics,combined,ADV,gru,"0,923","0,934","0,918","0,925",0.925
+356,electronics,home,combined,onlyADV,gru,"0,734","0,734","0,602","0,69",0.69
+357,electronics,lego,combined,onlyADV,gru,"0,773","0,773","0,818","0,788",0.788
+358,electronics,toys,combined,onlyADV,gru,"0,757","0,756","0,673","0,7286666667",0.7286666667
+359,electronics,electronics,combined,onlyADV,gru,"0,761","0,769","0,672","0,734",0.734
+360,electronics,home,raw,VERB,cnn,"0,902","0,899","0,895","0,8986666667",0.8986666667
+361,electronics,lego,raw,VERB,cnn,"0,92","0,884","0,915","0,9063333333",0.9063333333
+362,electronics,toys,raw,VERB,cnn,"0,902","0,904","0,904","0,9033333333",0.9033333333
+363,electronics,electronics,raw,VERB,cnn,"0,914","0,914","0,914","0,914",0.914
+364,electronics,home,raw,only keep VERB,cnn,"0,778","0,78","0,775","0,7776666667",0.7776666667
+365,electronics,lego,raw,only keep VERB,cnn,"0,808","0,783","0,799","0,7966666667",0.7966666667
+366,electronics,toys,raw,only keep VERB,cnn,"0,794","0,796","0,806","0,7986666667",0.7986666667
+367,electronics,electronics,raw,only keep VERB,cnn,"0,828","0,826","0,828","0,8273333333",0.8273333333
+368,electronics,home,pos,VERB,cnn,"0,671","0,679","0,68","0,6766666667",0.6766666667
+369,electronics,lego,pos,VERB,cnn,"0,822","0,732","0,75","0,768",0.768
+370,electronics,toys,pos,VERB,cnn,"0,728","0,716","0,72","0,7213333333",0.7213333333
+371,electronics,electronics,pos,VERB,cnn,"0,744","0,74","0,75","0,7446666667",0.7446666667
+372,electronics,home,pos,only keep VERB,cnn,"0,602","0,602","0,602","0,602",0.602
+373,electronics,lego,pos,only keep VERB,cnn,"0,818","0,818","0,818","0,818",0.818
+374,electronics,toys,pos,only keep VERB,cnn,"0,674","0,673","0,673","0,6733333333",0.6733333333
+375,electronics,electronics,pos,only keep VERB,cnn,"0,672","0,672","0,672","0,672",0.672
+376,electronics,home,combined,VERB,cnn,"0,897","0,875","0,9","0,8906666667",0.8906666667
+377,electronics,lego,combined,VERB,cnn,"0,924","0,878","0,931","0,911",0.911
+378,electronics,toys,combined,VERB,cnn,"0,901","0,875","0,903","0,893",0.893
+379,electronics,electronics,combined,VERB,cnn,"0,92","0,893","0,916","0,9096666667",0.9096666667
+380,electronics,home,combined,only keep VERB,cnn,"0,7745","0,789","0,776","0,7798333333",0.7798333333
+381,electronics,lego,combined,only keep VERB,cnn,"0,797","0,809","0,795","0,8003333333",0.8003333333
+382,electronics,toys,combined,only keep VERB,cnn,"0,798","0,805","0,798","0,8003333333",0.8003333333
+383,electronics,electronics,combined,only keep VERB,cnn,"0,828","0,828","0,83","0,8286666667",0.8286666667
+384,electronics,home,raw,VERB,cbow,"0,857","0,842","0,856","0,8516666667",0.8516666667
+385,electronics,lego,raw,VERB,cbow,"0,896","0,903","0,896","0,8983333333",0.8983333333
+386,electronics,toys,raw,VERB,cbow,"0,871","0,871","0,877","0,873",0.873
+387,electronics,electronics,raw,VERB,cbow,"0,889","0,885","0,89","0,888",0.888
+388,electronics,home,raw,only keep VERB,cbow,"0,763","0,761","0,752","0,7586666667",0.7586666667
+389,electronics,lego,raw,only keep VERB,cbow,"0,831","0,832","0,831","0,8313333333",0.8313333333
+390,electronics,toys,raw,only keep VERB,cbow,"0,815","0,786","0,782","0,7943333333",0.7943333333
+391,electronics,electronics,raw,only keep VERB,cbow,"0,783","0,82","0,813","0,8053333333",0.8053333333
+392,electronics,home,pos,VERB,cbow,"0,646","0,651","0,645","0,6473333333",0.6473333333
+393,electronics,lego,pos,VERB,cbow,"0,773","0,786","0,813","0,7906666667",0.7906666667
+394,electronics,toys,pos,VERB,cbow,"0,678","0,692","0,709","0,693",0.693
+395,electronics,electronics,pos,VERB,cbow,"0,672","0,705","0,714","0,697",0.697
+396,electronics,home,pos,only keep VERB,cbow,"0,602","0,602","0,602","0,602",0.602
+397,electronics,lego,pos,only keep VERB,cbow,"0,818","0,818","0,818","0,818",0.818
+398,electronics,toys,pos,only keep VERB,cbow,"0,674","0,674","0,673","0,6736666667",0.6736666667
+399,electronics,electronics,pos,only keep VERB,cbow,"0,672","0,672","0,672","0,672",0.672
+400,electronics,home,combined,VERB,cbow,"0,856","0,856","0,855","0,8556666667",0.8556666667
+401,electronics,lego,combined,VERB,cbow,"0,905","0,899","0,894","0,8993333333",0.8993333333
+402,electronics,toys,combined,VERB,cbow,"0,867","0,875","0,871","0,871",0.871
+403,electronics,electronics,combined,VERB,cbow,"0,883","0,888","0,89","0,887",0.887
+404,electronics,home,combined,only keep VERB,cbow,"0,754","0,523","0,755","0,6773333333",0.6773333333
+405,electronics,lego,combined,only keep VERB,cbow,"0,835","0,269","0,835","0,6463333333",0.6463333333
+406,electronics,toys,combined,only keep VERB,cbow,"0,783","0,475","0,783","0,6803333333",0.6803333333
+407,electronics,electronics,combined,only keep VERB,cbow,"0,811","0,44","0,817","0,6893333333",0.6893333333
+408,electronics,home,raw,VERB,cnn_gru,"0,898","0,9","0,911","0,903",0.903
+409,electronics,lego,raw,VERB,cnn_gru,"0,881","0,907","0,916","0,9013333333",0.9013333333
+410,electronics,toys,raw,VERB,cnn_gru,"0,889","0,915","0,917","0,907",0.907
+411,electronics,electronics,raw,VERB,cnn_gru,"0,924","0,918","0,926","0,9226666667",0.9226666667
+412,electronics,home,raw,only keep VERB,cnn_gru,"0,771","0,784","0,768","0,7743333333",0.7743333333
+413,electronics,lego,raw,only keep VERB,cnn_gru,"0,799","0,821","0,818","0,8126666667",0.8126666667
+414,electronics,toys,raw,only keep VERB,cnn_gru,"0,809","0,809","0,793","0,8036666667",0.8036666667
+415,electronics,electronics,raw,only keep VERB,cnn_gru,"0,831","0,837","0,829","0,8323333333",0.8323333333
+416,electronics,home,pos,VERB,cnn_gru,"0,717","0,723","0,721","0,7203333333",0.7203333333
+417,electronics,lego,pos,VERB,cnn_gru,"0,751","0,815","0,815","0,7936666667",0.7936666667
+418,electronics,toys,pos,VERB,cnn_gru,"0,733","0,757","0,757","0,749",0.749
+419,electronics,electronics,pos,VERB,cnn_gru,"0,761","0,782","0,782","0,775",0.775
+420,electronics,home,pos,only keep VERB,cnn_gru,"0,602","0,602","0,602","0,602",0.602
+421,electronics,lego,pos,only keep VERB,cnn_gru,"0,818","0,818","0,817","0,8176666667",0.8176666667
+422,electronics,toys,pos,only keep VERB,cnn_gru,"0,674","0,674","0,673","0,6736666667",0.6736666667
+423,electronics,electronics,pos,only keep VERB,cnn_gru,"0,672","0,672","0,672","0,672",0.672
+424,electronics,home,combined,VERB,cnn_gru,"0,904","0,907","0,903","0,9046666667",0.9046666667
+425,electronics,lego,combined,VERB,cnn_gru,"0,926","0,908","0,934","0,9226666667",0.9226666667
+426,electronics,toys,combined,VERB,cnn_gru,"0,918","0,91","0,915","0,9143333333",0.9143333333
+427,electronics,electronics,combined,VERB,cnn_gru,"0,924","0,924","0,927","0,925",0.925
+428,electronics,home,combined,only keep VERB,cnn_gru,"0,78","0,785","0,783","0,7826666667",0.7826666667
+429,electronics,lego,combined,only keep VERB,cnn_gru,"0,814","0,82","0,795","0,8096666667",0.8096666667
+430,electronics,toys,combined,only keep VERB,cnn_gru,"0,801","0,805","0,808","0,8046666667",0.8046666667
+431,electronics,electronics,combined,only keep VERB,cnn_gru,"0,828","0,837","0,835","0,8333333333",0.8333333333
+432,electronics,home,raw,VERB,lstm,"0,883",,,"0,883",0.883
+433,electronics,lego,raw,VERB,lstm,"0,919",,,"0,919",0.919
+434,electronics,toys,raw,VERB,lstm,"0,898",,,"0,898",0.898
+435,electronics,electronics,raw,VERB,lstm,"0,914",,,"0,914",0.914
+436,electronics,home,raw,only keep VERB,lstm,"0,647","0,778","0,77","0,7316666667",0.7316666667
+437,electronics,lego,raw,only keep VERB,lstm,"0,708","0,796","0,794","0,766",0.766
+438,electronics,toys,raw,only keep VERB,lstm,"0,75","0,804","0,796","0,7833333333",0.7833333333
+439,electronics,electronics,raw,only keep VERB,lstm,"0,707","0,833","0,821","0,787",0.787
+440,electronics,home,pos,VERB,lstm,"0,696",,,"0,696",0.696
+441,electronics,lego,pos,VERB,lstm,"0,746",,,"0,746",0.746
+442,electronics,toys,pos,VERB,lstm,"0,721",,,"0,721",0.721
+443,electronics,electronics,pos,VERB,lstm,"0,756",,,"0,756",0.756
+444,electronics,home,pos,only keep VERB,lstm,"0,602","0,602","0,602","0,602",0.602
+445,electronics,lego,pos,only keep VERB,lstm,"0,818","0,818","0,818","0,818",0.818
+446,electronics,toys,pos,only keep VERB,lstm,"0,674","0,673","0,674","0,6736666667",0.6736666667
+447,electronics,electronics,pos,only keep VERB,lstm,"0,672","0,672","0,672","0,672",0.672
+448,electronics,home,combined,VERB,lstm,"0,9",,,"0,9",0.9
+449,electronics,lego,combined,VERB,lstm,"0,909",,,"0,909",0.909
+450,electronics,toys,combined,VERB,lstm,"0,91",,,"0,91",0.91
+451,electronics,electronics,combined,VERB,lstm,"0,921",,,"0,921",0.921
+452,electronics,home,combined,only keep VERB,lstm,"0,608","0,734","0,713","0,685",0.685
+453,electronics,lego,combined,only keep VERB,lstm,"0,817","0,794","0,808","0,8063333333",0.8063333333
+454,electronics,toys,combined,only keep VERB,lstm,"0,678","0,761","0,747","0,7286666667",0.7286666667
+455,electronics,electronics,combined,only keep VERB,lstm,"0,677","0,788","0,776","0,747",0.747
+456,electronics,home,raw,VERB,gru,"0,913","0,901","0,901","0,905",0.905
+457,electronics,lego,raw,VERB,gru,"0,92","0,92","0,884","0,908",0.908
+458,electronics,toys,raw,VERB,gru,"0,912","0,91","0,885","0,9023333333",0.9023333333
+459,electronics,electronics,raw,VERB,gru,"0,929","0,918","0,919","0,922",0.922
+460,electronics,home,raw,only keep VERB,gru,"0,603","0,786","0,785","0,7246666667",0.7246666667
+461,electronics,lego,raw,only keep VERB,gru,"0,818","0,794","0,791","0,801",0.801
+462,electronics,toys,raw,only keep VERB,gru,"0,674","0,805","0,807","0,762",0.762
+463,electronics,electronics,raw,only keep VERB,gru,"0,672","0,843","0,834","0,783",0.783
+464,electronics,home,pos,VERB,gru,"0,711","0,714","0,715","0,7133333333",0.7133333333
+465,electronics,lego,pos,VERB,gru,"0,784","0,757","0,787","0,776",0.776
+466,electronics,toys,pos,VERB,gru,"0,743","0,743","0,75","0,7453333333",0.7453333333
+467,electronics,electronics,pos,VERB,gru,"0,77","0,773","0,77","0,771",0.771
+468,electronics,home,pos,only keep VERB,gru,"0,603","0,602","0,602","0,6023333333",0.6023333333
+469,electronics,lego,pos,only keep VERB,gru,"0,818","0,818","0,818","0,818",0.818
+470,electronics,toys,pos,only keep VERB,gru,"0,674","0,674","0,673","0,6736666667",0.6736666667
+471,electronics,electronics,pos,only keep VERB,gru,"0,672","0,672","0,672","0,672",0.672
+472,electronics,home,combined,VERB,gru,"0,907","0,904","0,91","0,907",0.907
+473,electronics,lego,combined,VERB,gru,"0,926","0,913","0,923","0,9206666667",0.9206666667
+474,electronics,toys,combined,VERB,gru,"0,913","0,913","0,913","0,913",0.913
+475,electronics,electronics,combined,VERB,gru,"0,927","0,92","0,92","0,9223333333",0.9223333333
+476,electronics,home,combined,only keep VERB,gru,"0,603","0,792","0,79","0,7283333333",0.7283333333
+477,electronics,lego,combined,only keep VERB,gru,"0,818","0,805","0,805","0,8093333333",0.8093333333
+478,electronics,toys,combined,only keep VERB,gru,"0,674","0,799","0,805","0,7593333333",0.7593333333
+479,electronics,electronics,combined,only keep VERB,gru,"0,672","0,838","0,837","0,7823333333",0.7823333333
+480,electronics,home,raw,NOUN,cnn,"0,898","0,898",,"0,898",0.898
+481,electronics,lego,raw,NOUN,cnn,"0,922","0,938",,"0,93",0.93
+482,electronics,toys,raw,NOUN,cnn,"0,904","0,904",,"0,904",0.904
+483,electronics,electronics,raw,NOUN,cnn,"0,924","0,926",,"0,925",0.925
+484,electronics,home,raw,onlyNOUN,cnn,"0,749","0,744",,"0,7465",0.7465
+485,electronics,lego,raw,onlyNOUN,cnn,"0,799","0,776",,"0,7875",0.7875
+486,electronics,toys,raw,onlyNOUN,cnn,"0,755","0,736",,"0,7455",0.7455
+487,electronics,electronics,raw,onlyNOUN,cnn,"0,789","0,779",,"0,784",0.784
+488,electronics,home,pos,NOUN,cnn,"0,705","0,7",,"0,7025",0.7025
+489,electronics,lego,pos,NOUN,cnn,"0,814","0,771",,"0,7925",0.7925
+490,electronics,toys,pos,NOUN,cnn,"0,74","0,714",,"0,727",0.727
+491,electronics,electronics,pos,NOUN,cnn,"0,771","0,749",,"0,76",0.76
+492,electronics,home,pos,onlyNOUN,cnn,"0,602","0,602",,"0,602",0.602
+493,electronics,lego,pos,onlyNOUN,cnn,"0,817","0,817",,"0,817",0.817
+494,electronics,toys,pos,onlyNOUN,cnn,"0,673","0,673",,"0,673",0.673
+495,electronics,electronics,pos,onlyNOUN,cnn,"0,672","0,672",,"0,672",0.672
+496,electronics,home,combined,NOUN,cnn,"0,902","0,897",,"0,8995",0.8995
+497,electronics,lego,combined,NOUN,cnn,"0,928","0,913",,"0,9205",0.9205
+498,electronics,toys,combined,NOUN,cnn,"0,909","0,904",,"0,9065",0.9065
+499,electronics,electronics,combined,NOUN,cnn,"0,922","0,921",,"0,9215",0.9215
+500,electronics,home,combined,onlyNOUN,cnn,"0,741","0,744",,"0,7425",0.7425
+501,electronics,lego,combined,onlyNOUN,cnn,"0,768","0,76",,"0,764",0.764
+502,electronics,toys,combined,onlyNOUN,cnn,"0,743","0,736",,"0,7395",0.7395
+503,electronics,electronics,combined,onlyNOUN,cnn,"0,785","0,791",,"0,788",0.788
+504,electronics,home,raw,NOUN,cbow,"0,864","0,876",,"0,87",0.87
+505,electronics,lego,raw,NOUN,cbow,"0,916","0,913",,"0,9145",0.9145
+506,electronics,toys,raw,NOUN,cbow,"0,882","0,876",,"0,879",0.879
+507,electronics,electronics,raw,NOUN,cbow,"0,896","0,899",,"0,8975",0.8975
+508,electronics,home,raw,onlyNOUN,cbow,"0,722",,,"0,722",0.722
+509,electronics,lego,raw,onlyNOUN,cbow,"0,736",,,"0,736",0.736
+510,electronics,toys,raw,onlyNOUN,cbow,"0,746",,,"0,746",0.746
+511,electronics,electronics,raw,onlyNOUN,cbow,"0,775",,,"0,775",0.775
+512,electronics,home,pos,NOUN,cbow,"0,652","0,65",,"0,651",0.651
+513,electronics,lego,pos,NOUN,cbow,"0,804","0,792",,"0,798",0.798
+514,electronics,toys,pos,NOUN,cbow,"0,699","0,703",,"0,701",0.701
+515,electronics,electronics,pos,NOUN,cbow,"0,712","0,708",,"0,71",0.71
+516,electronics,home,pos,onlyNOUN,cbow,"0,602",,,"0,602",0.602
+517,electronics,lego,pos,onlyNOUN,cbow,"0,817",,,"0,817",0.817
+518,electronics,toys,pos,onlyNOUN,cbow,"0,673",,,"0,673",0.673
+519,electronics,electronics,pos,onlyNOUN,cbow,"0,672",,,"0,672",0.672
+520,electronics,home,combined,NOUN,cbow,"0,871","0,863",,"0,867",0.867
+521,electronics,lego,combined,NOUN,cbow,"0,907","0,898",,"0,9025",0.9025
+522,electronics,toys,combined,NOUN,cbow,"0,88","0,877",,"0,8785",0.8785
+523,electronics,electronics,combined,NOUN,cbow,"0,899","0,902",,"0,9005",0.9005
+524,electronics,home,combined,onlyNOUN,cbow,"0,676",,,"0,676",0.676
+525,electronics,lego,combined,onlyNOUN,cbow,"0,565",,,"0,565",0.565
+526,electronics,toys,combined,onlyNOUN,cbow,"0,655",,,"0,655",0.655
+527,electronics,electronics,combined,onlyNOUN,cbow,"0,669",,,"0,669",0.669
+528,electronics,home,raw,NOUN,cnn_gru,"0,913","0,911",,"0,912",0.912
+529,electronics,lego,raw,NOUN,cnn_gru,"0,938","0,939",,"0,9385",0.9385
+530,electronics,toys,raw,NOUN,cnn_gru,"0,926","0,922",,"0,924",0.924
+531,electronics,electronics,raw,NOUN,cnn_gru,"0,935","0,935",,"0,935",0.935
+532,electronics,home,raw,onlyNOUN,cnn_gru,"0,748",,,"0,748",0.748
+533,electronics,lego,raw,onlyNOUN,cnn_gru,"0,788",,,"0,788",0.788
+534,electronics,toys,raw,onlyNOUN,cnn_gru,"0,763",,,"0,763",0.763
+535,electronics,electronics,raw,onlyNOUN,cnn_gru,"0,791",,,"0,791",0.791
+536,electronics,home,pos,NOUN,cnn_gru,"0,734","0,727",,"0,7305",0.7305
+537,electronics,lego,pos,NOUN,cnn_gru,"0,82","0,827",,"0,8235",0.8235
+538,electronics,toys,pos,NOUN,cnn_gru,"0,736","0,768",,"0,752",0.752
+539,electronics,electronics,pos,NOUN,cnn_gru,"0,791","0,788",,"0,7895",0.7895
+540,electronics,home,pos,onlyNOUN,cnn_gru,"0,602",,,"0,602",0.602
+541,electronics,lego,pos,onlyNOUN,cnn_gru,"0,817",,,"0,817",0.817
+542,electronics,toys,pos,onlyNOUN,cnn_gru,"0,673",,,"0,673",0.673
+543,electronics,electronics,pos,onlyNOUN,cnn_gru,"0,672",,,"0,672",0.672
+544,electronics,home,combined,NOUN,cnn_gru,"0,916","0,905",,"0,9105",0.9105
+545,electronics,lego,combined,NOUN,cnn_gru,"0,918","0,941",,"0,9295",0.9295
+546,electronics,toys,combined,NOUN,cnn_gru,"0,925","0,914",,"0,9195",0.9195
+547,electronics,electronics,combined,NOUN,cnn_gru,"0,937","0,932",,"0,9345",0.9345
+548,electronics,home,combined,onlyNOUN,cnn_gru,"0,74",,,"0,74",0.74
+549,electronics,lego,combined,onlyNOUN,cnn_gru,"0,77",,,"0,77",0.77
+550,electronics,toys,combined,onlyNOUN,cnn_gru,"0,734",,,"0,734",0.734
+551,electronics,electronics,combined,onlyNOUN,cnn_gru,"0,785",,,"0,785",0.785
+552,electronics,home,raw,NOUN,lstm,"0,897","0,915",,"0,906",0.906
+553,electronics,lego,raw,NOUN,lstm,"0,912","0,882",,"0,897",0.897
+554,electronics,toys,raw,NOUN,lstm,"0,908","0,918",,"0,913",0.913
+555,electronics,electronics,raw,NOUN,lstm,"0,915","0,928",,"0,9215",0.9215
+556,electronics,home,raw,onlyNOUN,lstm,"0,741",,,"0,741",0.741
+557,electronics,lego,raw,onlyNOUN,lstm,"0,774",,,"0,774",0.774
+558,electronics,toys,raw,onlyNOUN,lstm,"0,747",,,"0,747",0.747
+559,electronics,electronics,raw,onlyNOUN,lstm,"0,794",,,"0,794",0.794
+560,electronics,home,pos,NOUN,lstm,"0,713","0,669",,"0,691",0.691
+561,electronics,lego,pos,NOUN,lstm,"0,797","0,757",,"0,777",0.777
+562,electronics,toys,pos,NOUN,lstm,"0,741","0,703",,"0,722",0.722
+563,electronics,electronics,pos,NOUN,lstm,"0,772","0,723",,"0,7475",0.7475
+564,electronics,home,pos,onlyNOUN,lstm,"0,602",,,"0,602",0.602
+565,electronics,lego,pos,onlyNOUN,lstm,"0,817",,,"0,817",0.817
+566,electronics,toys,pos,onlyNOUN,lstm,"0,673",,,"0,673",0.673
+567,electronics,electronics,pos,onlyNOUN,lstm,"0,672",,,"0,672",0.672
+568,electronics,home,combined,NOUN,lstm,"0,905","0,902",,"0,9035",0.9035
+569,electronics,lego,combined,NOUN,lstm,"0,93","0,93",,"0,93",0.93
+570,electronics,toys,combined,NOUN,lstm,"0,914","0,907",,"0,9105",0.9105
+571,electronics,electronics,combined,NOUN,lstm,"0,929","0,923",,"0,926",0.926
+572,electronics,home,combined,onlyNOUN,lstm,"0,678","0,751",,"0,7145",0.7145
+573,electronics,lego,combined,onlyNOUN,lstm,"0,793","0,756",,"0,7745",0.7745
+574,electronics,toys,combined,onlyNOUN,lstm,"0,718","0,748",,"0,733",0.733
+575,electronics,electronics,combined,onlyNOUN,lstm,"0,733","0,7945",,"0,76375",0.76375
+576,electronics,home,raw,NOUN,gru,"0,914","0,919",,"0,9165",0.9165
+577,electronics,lego,raw,NOUN,gru,"0,917","0,921",,"0,919",0.919
+578,electronics,toys,raw,NOUN,gru,"0,92","0,921",,"0,9205",0.9205
+579,electronics,electronics,raw,NOUN,gru,"0,933","0,934",,"0,9335",0.9335
+580,electronics,home,raw,onlyNOUN,gru,"0,739","0,602",,"0,6705",0.6705
+581,electronics,lego,raw,onlyNOUN,gru,"0,798","0,673",,"0,7355",0.7355
+582,electronics,toys,raw,onlyNOUN,gru,"0,76","0,81",,"0,785",0.785
+583,electronics,electronics,raw,onlyNOUN,gru,"0,785","0,673",,"0,729",0.729
+584,electronics,home,pos,NOUN,gru,"0,71","0,724",,"0,717",0.717
+585,electronics,lego,pos,NOUN,gru,"0,733","0,766",,"0,7495",0.7495
+586,electronics,toys,pos,NOUN,gru,"0,736","0,725",,"0,7305",0.7305
+587,electronics,electronics,pos,NOUN,gru,"0,759","0,771",,"0,765",0.765
+588,electronics,home,pos,onlyNOUN,gru,"0,602","0,602",,"0,602",0.602
+589,electronics,lego,pos,onlyNOUN,gru,"0,817","0,817",,"0,817",0.817
+590,electronics,toys,pos,onlyNOUN,gru,"0,673","0,673",,"0,673",0.673
+591,electronics,electronics,pos,onlyNOUN,gru,"0,672","0,672",,"0,672",0.672
+592,electronics,home,combined,NOUN,gru,"0,919","0,918",,"0,9185",0.9185
+593,electronics,lego,combined,NOUN,gru,"0,917","0,938",,"0,9275",0.9275
+594,electronics,toys,combined,NOUN,gru,"0,919","0,924",,"0,9215",0.9215
+595,electronics,electronics,combined,NOUN,gru,"0,934","0,933",,"0,9335",0.9335
+596,electronics,home,combined,onlyNOUN,gru,"0,751","0,736",,"0,7435",0.7435
+597,electronics,lego,combined,onlyNOUN,gru,"0,814","0,79",,"0,802",0.802
+598,electronics,toys,combined,onlyNOUN,gru,"0,78","0,749",,"0,7645",0.7645
+599,electronics,electronics,combined,onlyNOUN,gru,"0,798","0,76",,"0,779",0.779
