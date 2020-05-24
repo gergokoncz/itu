@@ -1,6 +1,25 @@
 import requests, json
 import pandas as pd
 from datetime import datetime
+from geopy.geocoders import Nominatim
+
+def get_continent(x):
+    lat = x['latitude']
+    lon = x['longitude']
+    if lon >= -20 and lon < 40:
+        if lat >= 35:
+            return 'Europe'
+        else:
+            return 'Africa'
+    elif lon > 40:
+        if lat >= -10:
+            return 'Asia'
+        else:
+            return 'Australia'
+    else:
+        if lat > 12:
+            return 'North-America'
+    return 'South-America'
 
 if __name__ == "__main__":
     url = 'https://coinmap.org/api/v1/venues/'
@@ -18,5 +37,8 @@ if __name__ == "__main__":
     this_df['created_on'] = this_df['created_on'].apply(lambda x: int(x))
     this_df['created'] = this_df['created_on'].apply(lambda x: datetime.fromtimestamp(x))
     this_df['created_date'] = this_df['created'].apply(lambda x: x.date())
-    print(this_df.head())
+    this_df['category'] = this_df['category'].apply(lambda x: x.lower())
+    this_df['continent'] = this_df.apply(get_continent, axis = 1)
     this_df.to_csv('bitcoin_accepting_business.csv', index = False)
+
+
