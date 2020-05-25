@@ -1151,7 +1151,7 @@
       <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
         <aliases>
           <alias key='&quot;[federated.0rg4kuo0qrrmle1eso1do0pyr2xw].[avg:Close (BTC-USD.csv):qk]&quot;' value='BTC to USD closing prices' />
-          <alias key='&quot;[federated.0rg4kuo0qrrmle1eso1do0pyr2xw].[cum:avg:Daily New Infections (Global):qk]&quot;' value='Covid-19 infected total' />
+          <alias key='&quot;[federated.0rg4kuo0qrrmle1eso1do0pyr2xw].[cum:avg:Daily New Infections (Global):qk]&quot;' value='total number of infected people by Covid-19 ' />
         </aliases>
       </column>
       <column caption='Adj Close_GSPC' datatype='real' name='[Adj Close]' role='measure' type='quantitative' />
@@ -5631,7 +5631,7 @@
       <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
       <zones>
         <zone h='99740' id='3' name='Recent History of BitCoin' w='99780' x='146' y='0' />
-        <zone h='6510' id='4' name='Recent History of BitCoin' pane-specification-id='9' param='[federated.0rg4kuo0qrrmle1eso1do0pyr2xw].[:Measure Names]' show-title='false' type='color' w='13763' x='74671' y='8724' />
+        <zone h='6510' id='4' name='Recent History of BitCoin' pane-specification-id='9' param='[federated.0rg4kuo0qrrmle1eso1do0pyr2xw].[:Measure Names]' show-title='false' type='color' w='20278' x='68155' y='8724' />
         <zone h='4948' id='23' type='text' w='16032' x='83309' y='1302'>
           <formatted-text>
             <run fontname='Tableau Light' fontsize='8'>source:</run>
@@ -5644,8 +5644,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='25' type='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='24' param='vert' type='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='27' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='26' param='vert' type='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='280' h='99740' id='3' is-fixed='true' name='Recent History of BitCoin' w='99780' x='146' y='0'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5655,7 +5655,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='6510' id='4' name='Recent History of BitCoin' pane-specification-id='9' param='[federated.0rg4kuo0qrrmle1eso1do0pyr2xw].[:Measure Names]' show-title='false' type='color' w='13763' x='74671' y='8724'>
+                <zone h='6510' id='4' name='Recent History of BitCoin' pane-specification-id='9' param='[federated.0rg4kuo0qrrmle1eso1do0pyr2xw].[:Measure Names]' show-title='false' type='color' w='20278' x='68155' y='8724'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5711,8 +5711,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='850' minheight='850' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='33' type='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98632' id='32' param='vert' type='layout-flow' w='99032' x='484' y='684'>
+            <zone h='100000' id='35' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98632' id='34' param='vert' type='layout-flow' w='99032' x='484' y='684'>
                 <zone fixed-size='280' h='49102' id='12' is-fixed='true' name='Growth by Continent' w='56530' x='21463' y='-86'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5865,8 +5865,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='3550' minheight='3550' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='69' type='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='68' param='vert' type='layout-flow' w='98438' x='781' y='1042'>
+            <zone h='100000' id='71' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='70' param='vert' type='layout-flow' w='98438' x='781' y='1042'>
                 <zone forceUpdate='true' h='28255' id='42' type='text' w='33301' x='34473' y='0'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#00007f' fontname='Tableau Medium' fontsize='24'>Closing Price and Volume Comparison Before and During The Times of Covid-19</run>
@@ -6225,7 +6225,7 @@
     </dashboard>
   </dashboards>
   <windows source-height='261'>
-    <window class='dashboard' name='BitcoinHistory'>
+    <window class='dashboard' maximized='true' name='BitcoinHistory'>
       <viewpoints>
         <viewpoint name='Recent History of BitCoin'>
           <zoom type='entire-view' />
@@ -6256,7 +6256,7 @@
       <active id='-1' />
       <simple-id uuid='{0A6726AB-7C2A-4821-8552-C563FEB7F75E}' />
     </window>
-    <window class='dashboard' maximized='true' name='Compares'>
+    <window class='dashboard' name='Compares'>
       <viewpoints>
         <viewpoint name='apple_close'>
           <zoom type='entire-view' />
